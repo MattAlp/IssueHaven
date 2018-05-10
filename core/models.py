@@ -13,6 +13,7 @@ class Issue(Base):
     language = Column(String(64))
     category = Column(String(64))
     timestamp = Column(DateTime)
+    score = Column(Integer)
 
     def __repr__(self):
         return "<Issue(url='%s', language='%s')>" % (self.html_url, self.language)

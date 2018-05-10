@@ -1,5 +1,6 @@
 from os import environ
 
+
 class Config:
     CODE = ["first-timers-only", "low-hanging-fruit", "easy", "beginner", "good first issue", "easy-pick",
             "starter bug", "good-first-issue", "jump in", "newcomer", "beginner friendly", "e-easy", "starter",
@@ -10,11 +11,11 @@ class Config:
 
     GFX = ["graphics", "design", "ux", "ui", "ui/ux"]  # "copy" tag?
 
-    LANGUAGES = ["python", "javascript", "ruby", "php", "c++", "go", "c#", "ruby", "java"]
+    LANGUAGES = ["python", "javascript"]  # , "ruby", "php", "c++", "go", "c#", "ruby", "java"]
 
     # TODO are the labels caps-sensitive on GitHub -> Nope
 
-    CATEGORIES = {"newbie": CODE, "docs": DOCS, "graphics": GFX}
+    CATEGORIES = {"code": CODE, "documentation": DOCS, "graphics": GFX}
 
     USER = environ.get("USERNAME")
     PASSWORD = environ.get("PASSWORD")

@@ -18,7 +18,5 @@ if __name__ == "__main__":
 
     for label in Config.GFX:
         search_issues(label, "any", "graphics", session)
-    for label in Config.DOCS:
-        search_issues(label, "any")
     session.close()
     exit()

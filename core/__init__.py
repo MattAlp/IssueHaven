@@ -1,4 +1,7 @@
 from core.config import Config
+from core.models import Issue
+from sqlalchemy.orm import Session
+from sqlalchemy.sql import exists
 import time
 import requests
 
@@ -13,7 +16,7 @@ def generate_search_string():
     return searches
 
 
-def search_issues(label: str, language: str):
+def search_issues(label: str, language: str, session: Session):
     print("[INFO] Searching for all issues with label %s written in %s" % (label, language))
     search_string = """label:"%s" language:%s state:open""" % (label, language)
     page_count = 1
@@ -36,6 +39,10 @@ def search_issues(label: str, language: str):
         for issue in data:
             print("[INFO] Issue %i, titled %s" % (issue['id'], issue['title']))
 
+            if not session.query(exists().where(Issue.id == issue['id'])).scalar():
+                session.add(Issue(language=language, id=issue['id'], html_url=issue['html_url'], category="CODE"))
+            #  TODO category needs to be restructured and automatically derived
+            # session.commit()
         print("[INFO] Sleeping for %f" % (Config.SECONDS_PER_REQUEST - (time.time() - t)))
         print("[INFO] Total results printed thus far: %d" % (i * Config.RESULTS_PER_PAGE))
         i += 1
@@ -45,3 +52,5 @@ def search_issues(label: str, language: str):
         except ValueError:
             print("[DEBUG] Request took longer than 2 seconds")
             time.sleep(Config.SECONDS_PER_REQUEST)
+        print("[INFO] Committing to DB")
+        session.commit()

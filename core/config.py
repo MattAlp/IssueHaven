@@ -1,6 +1,5 @@
 from os import environ
 
-
 class Config:
     CODE = ["first-timers-only", "low-hanging-fruit", "easy", "beginner", "good first issue", "easy-pick",
             "starter bug", "good-first-issue", "jump in", "newcomer", "beginner friendly", "e-easy", "starter",
@@ -26,3 +25,5 @@ class Config:
     SECONDS_PER_REQUEST = 2.1  # Just a little over 2
 
     ISSUES_URL = "https://api.github.com/search/issues"
+
+

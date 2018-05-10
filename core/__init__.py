@@ -36,7 +36,8 @@ def search_issues(label: str, language: str, category: str, session: Session):
 
         if page_index == 1:
             page_count = int(min(Config.MAX_PAGES, ceil(total_issues / Config.RESULTS_PER_PAGE)))
-            print("[INFO] Total issue count is %d, of which %d are shown" % (total_issues, min(Config.MAX_RESULTS, total_issues)))
+            print("[INFO] Total issue count is %d, of which %d are shown" % (total_issues,
+                                                                             min(Config.MAX_RESULTS, total_issues)))
         #  Repository has language related things, issue knows nothing of the related language
         #  Score is 1 for all items unless a search string is issued
 
@@ -48,7 +49,8 @@ def search_issues(label: str, language: str, category: str, session: Session):
             print("[INFO] Issue %i, titled %s" % (id, issue['title']))
 
             if not session.query(exists().where(Issue.id == issue['id'])).scalar():
-                session.add(Issue(language=language, id=id, html_url=html_url, category=category, timestamp=timestamp, score=issue_count))
+                session.add(Issue(language=language, id=id, html_url=html_url, category=category, timestamp=timestamp,
+                                  score=total_issues - issue_count))
 
         print("[INFO] Total results printed thus far: %d" % issue_count)
         page_index += 1

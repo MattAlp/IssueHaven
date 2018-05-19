@@ -9,9 +9,9 @@ class Config:
 
     DOCS = ["localization", "documentation", "docs", "chore"]  # TODO revise all these tags
 
-    GFX = ["graphics", "design", "ux", "ui", "ui/ux"]  # "copy" tag?
+    GFX = ["graphics", "design", "ux", "ui", "ui/ux"]  # "copy" tag? TODO move these until a further release
 
-    LANGUAGES = ["python", "javascript"]  # , "ruby", "php", "c++", "go", "c#", "ruby", "java"]
+    LANGUAGES = ["python", "javascript", "ruby", "php", "c++", "go", "c#", "java"]
 
     # TODO are the labels caps-sensitive on GitHub -> Nope
 

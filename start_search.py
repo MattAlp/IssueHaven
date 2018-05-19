@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     for language in Config.LANGUAGES:
         for label in code:
-            search_issues(label, language, "code", session)
+            search_issues(label, language, "code", session)  # category "code" is just a placeholder for the time being
     #
     # for label in Config.DOCS:
     #     search_issues(label, "any", "documentation", session)

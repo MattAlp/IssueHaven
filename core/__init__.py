@@ -2,7 +2,7 @@ from core.config import Config
 from core.models import Issue
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import exists
-from math import ceil, log10
+from math import ceil, log10, sqrt
 import time
 import requests
 import datetime
@@ -38,20 +38,23 @@ def search_issues(label: str, language: str, category: str, session: Session):
             page_count = int(min(Config.MAX_PAGES, ceil(total_issues / Config.RESULTS_PER_PAGE)))
             print("[INFO] Total issue count is %d, of which %d are shown" % (total_issues,
                                                                              min(Config.MAX_RESULTS, total_issues)))
-        #  Repository has language related things, issue knows nothing of the related language
-        #  Score is 1 for all items unless a search string is issued
 
         for issue in data:
+
             issue_count += 1
             id = issue['id']
             html_url = issue['html_url']
+            title = issue['title']
             comments = issue['comments']
             timestamp = datetime.datetime.strptime(issue['updated_at'], '%Y-%m-%dT%H:%M:%SZ')
-            print("[INFO] Issue %i, titled %s" % (id, issue['title']))
 
-            if not session.query(exists().where(Issue.id == issue['id'])).scalar():
-                session.add(Issue(language=language, id=id, html_url=html_url, category=category, timestamp=timestamp,
-                                  score=(ceil(log10(total_issues - issue_count))) * (comments + 1)))
+            print("[INFO] Issue %i, titled '%s'" % (id, title))
+
+            if not session.query(exists().where(Issue.id == id)).scalar():
+                session.add(Issue(language=language, id=id, title=title, html_url=html_url,
+                                  category=category, timestamp=timestamp,
+                                  score=(max(1.0, ceil(log10(total_issues - issue_count + 1.0)))) * sqrt(comments + 1.0)
+                                  ))
 
         print("[INFO] Total results printed thus far: %d" % issue_count)
         page_index += 1

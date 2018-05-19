@@ -9,9 +9,12 @@ if __name__ == "__main__":
     session = session_factory()
     requests_cache.install_cache("testing_cache", backend=None, expire_after=360000)
 
-    # for language in Config.LANGUAGES:
-    #     for label in Config.CODE:
-    #         search_issues(label, language, "code", session)
+    code = ["good first issue", "beginner", "e-easy", "beginner friendly", "starter",
+            "first-timers only", "starter", "newbie", "jump in", "low-hanging fruit"]
+
+    for language in Config.LANGUAGES:
+        for label in code:
+            search_issues(label, language, "code", session)
     #
     # for label in Config.DOCS:
     #     search_issues(label, "any", "documentation", session)

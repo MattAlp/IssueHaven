@@ -2,7 +2,7 @@ from core.config import Config
 from core.models import Issue
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import exists
-from math import ceil
+from math import ceil, log10
 import time
 import requests
 import datetime
@@ -45,12 +45,13 @@ def search_issues(label: str, language: str, category: str, session: Session):
             issue_count += 1
             id = issue['id']
             html_url = issue['html_url']
+            comments = issue['comments']
             timestamp = datetime.datetime.strptime(issue['updated_at'], '%Y-%m-%dT%H:%M:%SZ')
             print("[INFO] Issue %i, titled %s" % (id, issue['title']))
 
             if not session.query(exists().where(Issue.id == issue['id'])).scalar():
                 session.add(Issue(language=language, id=id, html_url=html_url, category=category, timestamp=timestamp,
-                                  score=total_issues - issue_count))
+                                  score=(ceil(log10(total_issues - issue_count))) * (comments + 1)))
 
         print("[INFO] Total results printed thus far: %d" % issue_count)
         page_index += 1

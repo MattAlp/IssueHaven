@@ -10,15 +10,6 @@ import datetime
 
 #  TODO get proper logging going ASAP
 
-
-def generate_search_string():
-    searches = []
-    for language in Config.LANGUAGES:
-        for label in Config.CODE:
-            searches.append("""label:"%s" language:%s state:open""" % (label, language))
-    return searches
-
-
 def search_issues(label: str, language: str, category: str, session: Session):
     print("[DEBUG] Searching for all issues with label %s written in %s" % (label, language))
 

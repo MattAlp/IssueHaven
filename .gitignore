@@ -1,3 +1,10 @@
+# PyCharm and current project
+.idea/
+project_tools/*.sqlite
+project_tools/repos.json
+data/
+!data/.gitkeep
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -89,12 +96,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
-# PyCharm and current project
-.idea/
-test.db
-testing_cache.sqlite
-
 
 # Spyder project settings
 .spyderproject

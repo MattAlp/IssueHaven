@@ -2,13 +2,13 @@
 
 Still very WIP and already eating up all of my free time :')
 
+Finds good issues for beginners on Github and categorizes them for easy lookup
+
+Consists of a Flask server that acts as a search engine, and a few Python scripts that aggregate issues
 
 # TODO
+* Add categories and doc tags
 
-Fill out requirements.txt
+* Add rate limiting logic when aggregating issues for different categories
 
-Create tool scripts in project_tools
-
-Flesh out Flask component of project
-
-Fix ranking algorithm
+* Flesh out Flask component of project

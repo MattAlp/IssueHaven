@@ -29,8 +29,8 @@ def get_top_repos(language: str, limit: int = 1, update: bool = False):
     # This code doesn't work completely and requires that a repos.json file is made with {"repos":[]} as the content
     # TODO fix this
     if update:
-        file = open("repos.json", "r+")
-        if os.stat("repos.json").st_size == 0:
+        file = open(os.path.join(config.PROJECT_ROOT + "repos.json"), "r+")
+        if os.stat(file.name).st_size == 0:
             data = {"repos": []}
         else:
             data = json.load(file)

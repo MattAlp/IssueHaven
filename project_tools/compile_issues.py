@@ -5,6 +5,7 @@ from sqlalchemy import exists
 from github_searcher.models import Base, engine, Issue, Repo
 import config
 import json
+import os
 
 
 if __name__ == "__main__":
@@ -17,11 +18,11 @@ if __name__ == "__main__":
     session_factory = sessionmaker(bind=engine)
     session = session_factory()
 
-    with open('repos.json', "r") as f:
+    with open(os.path.join(config.PROJECT_ROOT, "repos.json"), "r") as f:
         data = json.load(f)
         for json_repo in data["repos"]:
             repo = client.get_repo(json_repo["name"])
-            if repo.has_issues:
+            if repo.has_issues and not repo.archived:
                 if not session.query(exists().where(Repo.repo_id == repo.id)).scalar():
                     session.add(Repo(repo_id=repo.id, name=repo.name, description=repo.description, url=repo.html_url,
                                      language=repo.language, created_at=repo.created_at,
@@ -55,7 +56,7 @@ if __name__ == "__main__":
                                 # In case the issue was already recorded by the code_labels loop, change the category to
                                 # reflect that the issue is actually a chore (i.e. documentation) and not related to
                                 # programming.
-                                Issue.query.filter_by(issue_id=issue.id).first().category = "chore"
+                                session.query(Issue).filter_by(issue_id=issue.id).first().category = "chore"
                     except UnknownObjectException:
                         print("[ERROR] Label %s wasn't found in repo %s" % (label, repo))
                 session.commit()

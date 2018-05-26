@@ -11,7 +11,6 @@ import os
 if __name__ == "__main__":
     print("[INFO] Token: " + config.TOKEN)
     print("[INFO] Database URL: " + config.DATABASE_URL)
-    # enable_console_debug_logging()
     client = Github(config.TOKEN, per_page=config.SEARCH_PER_PAGE)
 
     Base.metadata.create_all(engine)
@@ -40,6 +39,12 @@ if __name__ == "__main__":
                                 session.add(Issue(issue_id=issue.id, repo_id=repo.id, title=issue.title,
                                                   description=issue.body, url=issue.html_url, category="code",
                                                   created_at=issue.created_at, total_comments=issue.comments))
+                            else:
+                                # In case the issue already exists
+                                # existing_issue = session.query(Issue).filter_by(issue_id=issue.id).first()
+                                # existing_issue.total_comments = issue.comments
+                                pass
+                                # TODO add update/cleanup code
                     except UnknownObjectException:
                         print("[ERROR] Label %s wasn't found in repo %s" % (label, repo))
                 for label in json_repo["chore_labels"]:

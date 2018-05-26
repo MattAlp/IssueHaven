@@ -1,6 +1,5 @@
 from github import Github
-import config
-import requests_cache
+from github_searcher import config
 import time
 import json
 import os
@@ -22,6 +21,7 @@ def get_top_repos(language: str, limit: int = 1, update: bool = False):
                 collected_repos.append({"name": repo.full_name, "code_labels": overlap, "chore_labels": []})
         time.sleep(max(0.0, (2 / 30.0) - (time.time() - t)))
 
+    # This code doesn't work completely and requires that a repos.json file is made with {"repos":[]} as the content
     if update:
         file = open("repos.json", "r+")
         if os.stat("repos.json").st_size == 0:
@@ -29,14 +29,12 @@ def get_top_repos(language: str, limit: int = 1, update: bool = False):
         else:
             data = json.load(file)
         data["repos"] += collected_repos
+        file.seek(0)
         json.dump(data, file, indent=4)
         file.close()
 
 
 if __name__ == "__main__":
-    requests_cache.install_cache("top_repos_cache", backend="sqlite", expire_after=3600)
-
     languages = config.LANGUAGES  # Want to run through some other languages? Just change this to a custom list!
-
-    for language in config.LANGUAGES:
+    for language in languages:
         get_top_repos(language, limit=200, update=True)

@@ -1,9 +1,9 @@
 # PyCharm and current project
 .idea/
-test.db
-testing_cache.sqlite
 project_tools/*.sqlite
 project_tools/repos.json
+data/
+!data/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

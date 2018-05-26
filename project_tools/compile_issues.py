@@ -9,6 +9,7 @@ import json
 
 if __name__ == "__main__":
     print("[INFO] Token: " + config.TOKEN)
+    print("[INFO] Database URL: " + config.DATABASE_URL)
     # enable_console_debug_logging()
     client = Github(config.TOKEN, per_page=config.SEARCH_PER_PAGE)
 

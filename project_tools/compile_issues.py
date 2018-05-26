@@ -3,7 +3,7 @@ from github.GithubException import UnknownObjectException
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import exists
 from github_searcher.models import Base, engine, Issue, Repo
-from github_searcher import config
+import config
 import json
 
 

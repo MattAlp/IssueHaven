@@ -1,5 +1,5 @@
 from github import Github
-from github_searcher import config
+import config
 import time
 import json
 import os

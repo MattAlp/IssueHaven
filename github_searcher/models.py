@@ -1,6 +1,6 @@
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, DateTime, create_engine
-from github_searcher import config
+import config
 
 Base = declarative_base()
 engine = create_engine(config.DATABASE_URL, echo=False)

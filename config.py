@@ -10,4 +10,4 @@ CODE = ["first-timers-only", "low-hanging-fruit", "easy", "beginner", "good firs
 
 LANGUAGES = ["python", "typescript", "javascript", "ruby", "php", "c++", "go", "c#", "java"]
 
-TOKEN = os.environ.get("TOKEN")
+TOKEN = os.getenv("TOKEN")

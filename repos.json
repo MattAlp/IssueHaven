@@ -5,14 +5,32 @@
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "pallets/flask",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "jakubroztocil/httpie",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "ansible/ansible",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "scikit-learn/scikit-learn",
@@ -26,15 +44,46 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "donnemartin/system-design-primer",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "translation"
+            ]
         },
         {
             "name": "certbot/certbot",
             "code_labels": [
-                "easy-fix",
-                "good first issue"
+                "good first issue",
+                "easy-fix"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "0xAX/linux-insides",
+            "code_labels": [],
+            "chore_labels": [
+                "translation"
+            ]
+        },
+        {
+            "name": "tldr-pages/tldr",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "tornadoweb/tornado",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "pandas-dev/pandas",
@@ -42,6 +91,13 @@
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "home-assistant/home-assistant",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "facebookresearch/Detectron",
@@ -55,7 +111,16 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "localstack/localstack",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "HelloZeroNet/ZeroNet",
@@ -65,11 +130,25 @@
             "chore_labels": []
         },
         {
+            "name": "pypa/pipenv",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "encode/django-rest-framework",
             "code_labels": [
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "nicolargo/glances",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "celery/celery",
@@ -79,18 +158,36 @@
             "chore_labels": []
         },
         {
+            "name": "explosion/spaCy",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "channelcat/sanic",
             "code_labels": [
                 "beginner"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "luongvo209/Awesome-Linux-Software",
+            "code_labels": [],
+            "chore_labels": [
+                "translation"
+            ]
         },
         {
             "name": "trailofbits/algo",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "NVIDIA/FastPhotoStyle",
@@ -98,6 +195,13 @@
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "beetbox/beets",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "getpelican/pelican",
@@ -118,7 +222,9 @@
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "warner/magic-wormhole",
@@ -126,6 +232,13 @@
                 "easy"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "locustio/locust",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "matplotlib/matplotlib",
@@ -142,47 +255,115 @@
             "chore_labels": []
         },
         {
+            "name": "mail-in-a-box/mailinabox",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "audreyr/cookiecutter",
             "code_labels": [
                 "low-hanging-fruit"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "Miserlou/Zappa",
             "code_labels": [
                 "easy-fix"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "RaRe-Technologies/gensim",
             "code_labels": [
-                "good first issue",
-                "easy"
+                "easy",
+                "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "sovereign/sovereign",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "eliangcs/http-prompt",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "aws/aws-cli",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "nltk/nltk",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "phusion/baseimage-docker",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "joke2k/faker",
+            "code_labels": [],
+            "chore_labels": [
+                "translation"
+            ]
+        },
+        {
+            "name": "boto/boto",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "deis/deis",
             "code_labels": [
                 "easy-fix"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "scrapinghub/portia",
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "gunthercox/ChatterBot",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "matterport/Mask_RCNN",
@@ -196,7 +377,16 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "donnemartin/gitsome",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "deepfakes/faceswap",
@@ -227,18 +417,29 @@
             "chore_labels": []
         },
         {
+            "name": "tgalal/yowsup",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "pallets/jinja",
             "code_labels": [
                 "beginner friendly"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "falconry/falcon",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "mopidy/mopidy",
@@ -248,14 +449,14 @@
             "chore_labels": []
         },
         {
-            "name": "plotly/dash",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
+            "name": "pyeve/eve",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
-            "name": "Zulko/moviepy",
+            "name": "plotly/dash",
             "code_labels": [
                 "good first issue"
             ],
@@ -269,6 +470,29 @@
             "chore_labels": []
         },
         {
+            "name": "python-telegram-bot/python-telegram-bot",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "Zulko/moviepy",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "mwaskom/seaborn",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "sympy/sympy",
             "code_labels": [
                 "good first issue"
@@ -280,7 +504,23 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "rq/rq",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "jupyter/jupyter",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "Microsoft/vscode",
@@ -301,7 +541,9 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "ant-design/ant-design",
@@ -322,50 +564,85 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "angular-ui/ui-router",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "NativeScript/NativeScript",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "prismagraphql/chromeless",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "flatpickr/flatpickr",
             "code_labels": [
                 "good-first-issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "react-dnd/react-dnd",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "tensorflow/tfjs-core",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "apollographql/apollo-client",
             "code_labels": [
-                "good first issue",
-                "good-first-issue"
+                "good-first-issue",
+                "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "BabylonJS/Babylon.js",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "jaredpalmer/formik",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "witheve/Eve",
@@ -375,11 +652,32 @@
             "chore_labels": []
         },
         {
+            "name": "typeorm/typeorm",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "google/google-api-nodejs-client",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "Microsoft/reactxp",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "linkedin/css-blocks",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "desktop/desktop",
@@ -389,6 +687,13 @@
             "chore_labels": []
         },
         {
+            "name": "nexe/nexe",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "jquery/esprima",
             "code_labels": [
                 "easy"
@@ -396,12 +701,28 @@
             "chore_labels": []
         },
         {
+            "name": "winjs/winjs",
+            "code_labels": [],
+            "chore_labels": [
+                "localization"
+            ]
+        },
+        {
+            "name": "theintern/intern",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "apollographql/apollo-server",
             "code_labels": [
-                "good first issue",
-                "easy"
+                "easy",
+                "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "xtermjs/xterm.js",
@@ -415,15 +736,20 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "localization"
+            ]
         },
         {
             "name": "pnpm/pnpm",
             "code_labels": [
-                "good first issue",
-                "easy"
+                "easy",
+                "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "Microsoft/vscode-go",
@@ -437,7 +763,9 @@
             "code_labels": [
                 "good-for-beginner"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "palantir/tslint",
@@ -447,6 +775,13 @@
             "chore_labels": []
         },
         {
+            "name": "Microsoft/code-push",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "VSCodeVim/Vim",
             "code_labels": [
                 "good first issue"
@@ -454,12 +789,22 @@
             "chore_labels": []
         },
         {
+            "name": "typings/typings",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "apollographql/react-apollo",
             "code_labels": [
-                "good first issue",
-                "good-first-issue"
+                "good-first-issue",
+                "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "docs"
+            ]
         },
         {
             "name": "NG-ZORRO/ng-zorro-antd",
@@ -490,6 +835,28 @@
             "chore_labels": []
         },
         {
+            "name": "angular/flex-layout",
+            "code_labels": [],
+            "chore_labels": [
+                "chore",
+                "docs"
+            ]
+        },
+        {
+            "name": "pillarjs/path-to-regexp",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "inversify/InversifyJS",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "jaredpalmer/after.js",
             "code_labels": [
                 "good first issue"
@@ -511,6 +878,141 @@
             "chore_labels": []
         },
         {
+            "name": "TypeStrong/ts-node",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "midwayjs/pandora",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "prismagraphql/graphql-playground",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "sindresorhus/ow",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": []
+        },
+        {
+            "name": "alexa/alexa-skills-kit-sdk-for-nodejs",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "meetalva/alva",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": []
+        },
+        {
+            "name": "Raathigesh/majestic",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": []
+        },
+        {
+            "name": "piotrwitek/react-redux-typescript-guide",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "oclif/oclif",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "apollographql/graphql-tools",
+            "code_labels": [
+                "easy",
+                "good first issue"
+            ],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "typestyle/typestyle",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "vuejs/vue-class-component",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "Jigsaw-Code/outline-server",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": []
+        },
+        {
+            "name": "smyte/jsxstyle",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "Azure/autorest",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "angular/universal-starter",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "plasma-umass/doppio",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "slackapi/node-slack-sdk",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "1backend/1backend",
             "code_labels": [
                 "good first issue"
@@ -518,11 +1020,32 @@
             "chore_labels": []
         },
         {
+            "name": "Teradata/covalent",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "davidkpiano/xstate",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "akveo/nebular",
             "code_labels": [
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "ionic-team/ionic-cli",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "sonarwhal/sonarwhal",
@@ -539,11 +1062,11 @@
             "chore_labels": []
         },
         {
-            "name": "rangle/augury",
-            "code_labels": [
-                "easy-fix"
-            ],
-            "chore_labels": []
+            "name": "s-panferov/awesome-typescript-loader",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "wasdk/WebAssemblyStudio",
@@ -553,11 +1076,30 @@
             "chore_labels": []
         },
         {
+            "name": "rangle/augury",
+            "code_labels": [
+                "easy-fix"
+            ],
+            "chore_labels": [
+                "chore",
+                "docs"
+            ]
+        },
+        {
             "name": "prismagraphql/graphql-yoga",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "Microsoft/vscode-react-native",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "improbable-eng/grpc-web",
@@ -574,11 +1116,32 @@
             "chore_labels": []
         },
         {
-            "name": "dalelotts/angular-bootstrap-datetimepicker",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
+            "name": "Microsoft/TouchDevelop",
+            "code_labels": [],
+            "chore_labels": [
+                "localization"
+            ]
+        },
+        {
+            "name": "valor-software/ng2-dragula",
+            "code_labels": [],
+            "chore_labels": [
+                "chore"
+            ]
+        },
+        {
+            "name": "superpowers/superpowers-core",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "angular-gantt/angular-gantt",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "Jigsaw-Code/outline-client",
@@ -588,6 +1151,20 @@
             "chore_labels": []
         },
         {
+            "name": "dalelotts/angular-bootstrap-datetimepicker",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": []
+        },
+        {
+            "name": "tessera-metrics/tessera",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "thx/rap2-delos",
             "code_labels": [
                 "good first issue"
@@ -595,78 +1172,7 @@
             "chore_labels": []
         },
         {
-            "name": "cherow/cherow",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
-        },
-        {
-            "name": "vscode-icons/vscode-icons",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
-        },
-        {
-            "name": "jabbany/CommentCoreLibrary",
-            "code_labels": [
-                "low-hanging-fruit"
-            ],
-            "chore_labels": []
-        },
-        {
-            "name": "apollographql/apollo-codegen",
-            "code_labels": [
-                "good first issue",
-                "easy"
-            ],
-            "chore_labels": []
-        },
-        {
-            "name": "jupyter-widgets/ipywidgets",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
-        },
-        {
-            "name": "cmcaine/tridactyl",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
-        },
-        {
-            "name": "apollographql/apollo-link-state",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
-        },
-        {
-            "name": "glimmerjs/glimmer-vm",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
-        },
-        {
-            "name": "urish/ngx-moment",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
-        },
-        {
-            "name": "NativeScript/nativescript-angular",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
-        },
-        {
-            "name": "sveltejs/sapper",
+            "name": "reiinakano/fast-style-transfer-deeplearnjs",
             "code_labels": [
                 "good first issue"
             ],
@@ -687,6 +1193,13 @@
             "chore_labels": []
         },
         {
+            "name": "d3/d3",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "nodejs/node",
             "code_labels": [
                 "good first issue"
@@ -698,28 +1211,79 @@
             "code_labels": [
                 "beginner"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "axios/axios",
             "code_labels": [
                 "first-timers-only"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "chore"
+            ]
+        },
+        {
+            "name": "reduxjs/redux",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "webpack/webpack",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "hakimel/reveal.js",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "h5bp/html5-boilerplate",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "expressjs/express",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "mui-org/material-ui",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "impress/impress.js",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "Dogfalo/materialize",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "GoogleChrome/puppeteer",
@@ -729,11 +1293,40 @@
             "chore_labels": []
         },
         {
+            "name": "lodash/lodash",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "yarnpkg/yarn",
             "code_labels": [
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "ReactTraining/react-router",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "gulpjs/gulp",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "adobe/brackets",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "translation"
+            ]
         },
         {
             "name": "babel/babel",
@@ -754,7 +1347,9 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "zeit/next.js",
@@ -768,7 +1363,23 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "caolan/async",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "facebook/immutable-js",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "tastejs/todomvc",
@@ -792,6 +1403,27 @@
             "chore_labels": []
         },
         {
+            "name": "alvarotrigo/fullPage.js",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "select2/select2",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "hexojs/hexo",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "gatsbyjs/gatsby",
             "code_labels": [
                 "good first issue"
@@ -803,15 +1435,26 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "koajs/koa",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "videojs/video.js",
             "code_labels": [
-                "good first issue",
-                "first-timers-only"
+                "first-timers-only",
+                "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "Chalarangelo/30-seconds-of-code",
@@ -821,11 +1464,34 @@
             "chore_labels": []
         },
         {
+            "name": "apache/incubator-superset",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "developit/preact",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "GitbookIO/gitbook",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "react-boilerplate/react-boilerplate",
             "code_labels": [
                 "beginner"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "quilljs/quill",
@@ -839,14 +1505,46 @@
             "code_labels": [
                 "first-timers-only"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "kriasoft/react-starter-kit",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "verekia/js-stack-from-scratch",
+            "code_labels": [],
+            "chore_labels": [
+                "translation"
+            ]
+        },
+        {
+            "name": "petkaantonov/bluebird",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "pugjs/pug",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "npm/npm",
             "code_labels": [
                 "starter"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "markedjs/marked",
@@ -867,49 +1565,113 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "less/less.js",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "mochajs/mocha",
             "code_labels": [
                 "good-first-issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "chore"
+            ]
+        },
+        {
+            "name": "bower/bower",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "facebook/flux",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "mobxjs/mobx",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "parse-community/parse-server",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "jiahaog/nativefier",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "vuejs/vuex",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "sequelize/sequelize",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "kriskowal/q",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "yangshun/front-end-interview-handbook",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "translation"
+            ]
+        },
+        {
+            "name": "hubotio/hubot",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "airbnb/enzyme",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "avajs/ava",
@@ -919,18 +1681,36 @@
             "chore_labels": []
         },
         {
+            "name": "enyo/dropzone",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "GoogleChrome/lighthouse",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "jasmine/jasmine",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "redux-saga/redux-saga",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "feathericons/feather",
@@ -940,6 +1720,27 @@
             "chore_labels": []
         },
         {
+            "name": "wycats/handlebars.js",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "chenglou/react-motion",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "react-bootstrap/react-bootstrap",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "riot/riot",
             "code_labels": [
                 "good for beginner"
@@ -947,11 +1748,34 @@
             "chore_labels": []
         },
         {
+            "name": "facebook/draft-js",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "rollup/rollup",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "reduxjs/react-redux",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "infernojs/inferno",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "fbsamples/f8app",
@@ -961,18 +1785,72 @@
             "chore_labels": []
         },
         {
+            "name": "vuejs/vue-cli",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "yabwe/medium-editor",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "ramda/ramda",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "mysqljs/mysql",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "localForage/localForage",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "browserify/browserify",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "gruntjs/grunt",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "react-navigation/react-navigation",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "airbnb/react-sketchapp",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "chore",
+                "docs"
+            ]
         },
         {
             "name": "ampproject/amphtml",
@@ -982,74 +1860,259 @@
             "chore_labels": []
         },
         {
+            "name": "requirejs/requirejs",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "reduxjs/reselect",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "eslint/eslint",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "chore"
+            ]
         },
         {
-            "name": "caskroom/homebrew-cask",
+            "name": "rails/rails",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "jekyll/jekyll",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "Homebrew/legacy-homebrew",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "huginn/huginn",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "hashicorp/vagrant",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "tootsuite/mastodon",
+            "code_labels": [],
+            "chore_labels": [
+                "docs",
+                "localization"
+            ]
+        },
+        {
+            "name": "Homebrew/homebrew-cask",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "twbs/bootstrap-sass",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "rapid7/metasploit-framework",
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "Homebrew/brew",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "diaspora/diaspora",
             "code_labels": [
                 "newcomer"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "capistrano/capistrano",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "chore"
+            ]
         },
         {
             "name": "sinatra/sinatra",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "imathis/octopress",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "bbatsov/rubocop",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "elastic/logstash",
             "code_labels": [
                 "good first issue"
             ],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "Hacker0x01/hacker101",
+            "code_labels": [
+                "good first issue"
+            ],
             "chore_labels": []
+        },
+        {
+            "name": "jordansissel/fpm",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "ruby-grape/grape",
+            "code_labels": [],
+            "chore_labels": [
+                "chore"
+            ]
+        },
+        {
+            "name": "atech/postal",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "activeadmin/activeadmin",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "translation"
+            ]
+        },
+        {
+            "name": "carrierwaveuploader/carrierwave",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "tmuxinator/tmuxinator",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "charliesome/better_errors",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "ryanb/cancan",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "varvet/pundit",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "puma/puma",
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "realm/jazzy",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "pry/pry",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "justinfrench/formtastic",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "alexreisner/geocoder",
@@ -1057,6 +2120,13 @@
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "exercism/exercism.io",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "cucumber/cucumber-ruby",
@@ -1073,18 +2143,43 @@
             "chore_labels": []
         },
         {
+            "name": "ddollar/foreman",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "hanami/hanami",
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "primer/octicons",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "github-changelog-generator/github-changelog-generator",
             "code_labels": [
                 "good-first-issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "rest-client/rest-client",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "bundler/bundler",
@@ -1098,7 +2193,44 @@
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "ruby-concurrency/concurrent-ruby",
+            "code_labels": [],
+            "chore_labels": [
+                "chore"
+            ]
+        },
+        {
+            "name": "sferik/twitter",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "lostisland/faraday",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "CanCanCommunity/cancancan",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "mroth/lolcommits",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "vcr/vcr",
@@ -1108,6 +2240,20 @@
             "chore_labels": []
         },
         {
+            "name": "doorkeeper-gem/doorkeeper",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "thoughtbot/administrate",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "shakacode/react_on_rails",
             "code_labels": [
                 "easy"
@@ -1115,11 +2261,11 @@
             "chore_labels": []
         },
         {
-            "name": "opal/opal",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
+            "name": "errbit/errbit",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "kickstarter/rack-attack",
@@ -1129,11 +2275,71 @@
             "chore_labels": []
         },
         {
+            "name": "opal/opal",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "eventmachine/eventmachine",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "celluloid/celluloid",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "chore"
+            ]
+        },
+        {
+            "name": "solnic/virtus",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "Homebrew/homebrew-core",
             "code_labels": [
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "prawnpdf/prawn",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "chore"
+            ]
+        },
+        {
+            "name": "ryanb/ruby-warrior",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "samaaron/sonic-pi",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "laserlemon/figaro",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "aasm/aasm",
@@ -1143,6 +2349,13 @@
             "chore_labels": []
         },
         {
+            "name": "brigade/scss-lint",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "rails/webpacker",
             "code_labels": [
                 "good first issue"
@@ -1150,11 +2363,27 @@
             "chore_labels": []
         },
         {
+            "name": "FontCustom/fontcustom",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "padrino/padrino-framework",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "jruby/jruby",
             "code_labels": [
                 "beginner"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "fatfreecrm/fat_free_crm",
@@ -1164,11 +2393,41 @@
             "chore_labels": []
         },
         {
+            "name": "thoughtbot/clearance",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "octokit/octokit.rb",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "swanson/stringer",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "Netflix/fast_jsonapi",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "troessner/reek",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "symfony/symfony",
@@ -1192,11 +2451,42 @@
             "chore_labels": []
         },
         {
+            "name": "sebastianbergmann/phpunit",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "phacility/phabricator",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "briannesbitt/Carbon",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "translation"
+            ]
+        },
+        {
+            "name": "cakephp/cakephp",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "dingo/api",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "filp/whoops",
@@ -1213,6 +2503,20 @@
             "chore_labels": []
         },
         {
+            "name": "thephpleague/flysystem",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "the-control-group/voyager",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "reactphp/react",
             "code_labels": [
                 "good first issue"
@@ -1220,11 +2524,32 @@
             "chore_labels": []
         },
         {
+            "name": "owncloud/core",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "FriendsOfPHP/PHP-CS-Fixer",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "php-ai/php-ml",
             "code_labels": [
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "ramsey/uuid",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "deployphp/deployer",
@@ -1241,18 +2566,36 @@
             "chore_labels": []
         },
         {
+            "name": "google/google-api-php-client",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "mockery/mockery",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "Maatwebsite/Laravel-Excel",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "bobthecow/psysh",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "php-pm/php-pm",
@@ -1262,11 +2605,28 @@
             "chore_labels": []
         },
         {
+            "name": "dompdf/dompdf",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "monicahq/monica",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "localization"
+            ]
+        },
+        {
+            "name": "nrk/predis",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "nextcloud/server",
@@ -1276,11 +2636,32 @@
             "chore_labels": []
         },
         {
+            "name": "ratchetphp/Ratchet",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "YOURLS/YOURLS",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "timber/timber",
             "code_labels": [
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "phpstan/phpstan",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "symfony/thanks",
@@ -1294,7 +2675,9 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "translation"
+            ]
         },
         {
             "name": "wp-cli/wp-cli",
@@ -1302,6 +2685,13 @@
                 "good-first-issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "invoiceninja/invoiceninja",
+            "code_labels": [],
+            "chore_labels": [
+                "localization"
+            ]
         },
         {
             "name": "kanboard/kanboard",
@@ -1318,12 +2708,78 @@
             "chore_labels": []
         },
         {
+            "name": "cakephp/phinx",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "ThinkUpLLC/ThinkUp",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "doctrine/lexer",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "avalanche123/Imagine",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "aws/aws-sdk-php",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "pattern-lab/patternlab-php",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "phpmyadmin/phpmyadmin",
             "code_labels": [
-                "good first issue",
-                "newbie"
+                "newbie",
+                "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "translation"
+            ]
+        },
+        {
+            "name": "agentejo/cockpit",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "phan/phan",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "sebastianbergmann/phpunit-mock-objects",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "PHPOffice/PhpSpreadsheet",
@@ -1340,6 +2796,20 @@
             "chore_labels": []
         },
         {
+            "name": "olefredrik/FoundationPress",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "nwjs/nw.js",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "x64dbg/x64dbg",
             "code_labels": [
                 "easy"
@@ -1354,6 +2824,13 @@
             "chore_labels": []
         },
         {
+            "name": "google/protobuf",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "opencv/opencv",
             "code_labels": [
                 "good first issue"
@@ -1361,19 +2838,51 @@
             "chore_labels": []
         },
         {
+            "name": "BVLC/caffe",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "pytorch/pytorch",
             "code_labels": [
                 "newcomer"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "facebook/hhvm",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "godotengine/godot",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "facebook/osquery",
             "code_labels": [
-                "easy",
-                "good-first-issue"
+                "good-first-issue",
+                "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "nlohmann/json",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "OpenGenus/cosmos",
@@ -1383,32 +2892,100 @@
             "chore_labels": []
         },
         {
+            "name": "sqlitebrowser/sqlitebrowser",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "translation"
+            ]
+        },
+        {
+            "name": "caffe2/caffe2",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "apple/foundationdb",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "uglide/RedisDesktopManager",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "translation"
+            ]
         },
         {
             "name": "SFTtech/openage",
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "translation"
+            ]
+        },
+        {
+            "name": "telegramdesktop/tdesktop",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "mobile-shell/mosh",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "EOSIO/eos",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "PaddlePaddle/Paddle",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "translation"
+            ]
+        },
+        {
+            "name": "mozilla/DeepSpeech",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "apple/turicreate",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "openframeworks/openFrameworks",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "OpenRCT2/OpenRCT2",
@@ -1418,11 +2995,21 @@
             "chore_labels": []
         },
         {
+            "name": "notepad-plus-plus/notepad-plus-plus",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "translation"
+            ]
+        },
+        {
             "name": "bjorn/tiled",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "AudioKit/AudioKit",
@@ -1436,14 +3023,32 @@
             "code_labels": [
                 "beginner"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "ethereum/solidity",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "Maximus5/ConEmu",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "ceph/ceph",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "yuzu-emu/yuzu",
@@ -1453,6 +3058,13 @@
             "chore_labels": []
         },
         {
+            "name": "amzn/amazon-dsstne",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "abseil/abseil-cpp",
             "code_labels": [
                 "good first issue"
@@ -1460,11 +3072,25 @@
             "chore_labels": []
         },
         {
+            "name": "yandex/ClickHouse",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "kyleneideck/BackgroundMusic",
             "code_labels": [
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "facebook/redex",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "PaddlePaddle/paddle-mobile",
@@ -1478,21 +3104,27 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "zcash/zcash",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "Provenance-Emu/Provenance",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "peterbraden/node-opencv",
@@ -1523,11 +3155,27 @@
             "chore_labels": []
         },
         {
+            "name": "jaagr/polybar",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "monero-project/monero",
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "FLIF-hub/FLIF",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "xenia-project/xenia",
@@ -1544,6 +3192,13 @@
             "chore_labels": []
         },
         {
+            "name": "getlantern/lantern",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "syncthing/syncthing",
             "code_labels": [
                 "good first issue"
@@ -1555,14 +3210,25 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "mholt/caddy",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "inconshreveable/ngrok",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "cockroachdb/cockroach",
@@ -1579,16 +3245,31 @@
             "chore_labels": []
         },
         {
+            "name": "pingcap/tidb",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "github/hub",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "nsqio/nsq",
+            "code_labels": [],
+            "chore_labels": [
+                "chore",
+                "docs"
+            ]
+        },
+        {
             "name": "fatedier/frp",
             "code_labels": [
                 "easy"
-            ],
-            "chore_labels": []
-        },
-        {
-            "name": "hashicorp/consul",
-            "code_labels": [
-                "good-first-issue"
             ],
             "chore_labels": []
         },
@@ -1597,7 +3278,18 @@
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "hashicorp/consul",
+            "code_labels": [
+                "good-first-issue"
+            ],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "cayleygraph/cayley",
@@ -1607,11 +3299,39 @@
             "chore_labels": []
         },
         {
+            "name": "labstack/echo",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "kataras/iris",
             "code_labels": [
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "openfaas/faas",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "go-martini/martini",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "joewalnes/websocketd",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "ncw/rclone",
@@ -1625,7 +3345,23 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "derekparker/delve",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "urfave/cli",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "esimov/caire",
@@ -1639,14 +3375,39 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "apex/apex",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "gopherjs/gopherjs",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "gorilla/mux",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "gravitational/teleport",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "google/gvisor",
@@ -1658,24 +3419,51 @@
         {
             "name": "kubernetes/helm",
             "code_labels": [
-                "good first issue",
-                "starter"
+                "starter",
+                "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "elastic/beats",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "dgraph-io/dgraph",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "ipfs/go-ipfs",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "urfave/negroni",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "go-sql-driver/mysql",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "apex/up",
@@ -1685,19 +3473,37 @@
             "chore_labels": []
         },
         {
+            "name": "github/gh-ost",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "openebs/openebs",
             "code_labels": [
-                "good first issue",
-                "first-timers-only"
+                "first-timers-only",
+                "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "weaveworks/weave",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "chore"
+            ]
+        },
+        {
+            "name": "kelseyhightower/confd",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "stretchr/testify",
@@ -1714,6 +3520,13 @@
             "chore_labels": []
         },
         {
+            "name": "influxdata/telegraf",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "teh-cmc/go-internals",
             "code_labels": [
                 "good first issue"
@@ -1721,11 +3534,27 @@
             "chore_labels": []
         },
         {
+            "name": "fabiolb/fabio",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "jaegertracing/jaeger",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "upspin/upspin",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "tidwall/tile38",
@@ -1735,18 +3564,78 @@
             "chore_labels": []
         },
         {
+            "name": "peco/peco",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "schollz/find",
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "restic/restic",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "jmoiron/sqlx",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "blevesearch/bleve",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "hashicorp/serf",
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "ory/hydra",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "docker/distribution",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "lib/pq",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "grpc-ecosystem/grpc-gateway",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "rqlite/rqlite",
@@ -1760,14 +3649,32 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "dgraph-io/badger",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "bitly/oauth2_proxy",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "GoogleContainerTools/skaffold",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "zricethezav/gitleaks",
@@ -1781,7 +3688,9 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "google/go-github",
@@ -1789,6 +3698,20 @@
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "hashicorp/nomad",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "kardianos/govendor",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "iikira/BaiduPCS-Go",
@@ -1805,18 +3728,20 @@
             "chore_labels": []
         },
         {
-            "name": "tj/node-prune",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
+            "name": "CodeHubApp/CodeHub",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "dotnet/corefx",
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "dotnet/roslyn",
@@ -1830,21 +3755,55 @@
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "StackExchange/Dapper",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "SignalR/SignalR",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "mono/mono",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "JamesNK/Newtonsoft.Json",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "restsharp/RestSharp",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "aspnet/Mvc",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "0xd4d/dnSpy",
@@ -1852,6 +3811,14 @@
                 "easy"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "Microsoft/BotBuilder",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "localization"
+            ]
         },
         {
             "name": "aspnet/Blazor",
@@ -1868,6 +3835,48 @@
             "chore_labels": []
         },
         {
+            "name": "aspnetboilerplate/aspnetboilerplate",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "AvaloniaUI/Avalonia",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "App-vNext/Polly",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "Redth/PushSharp",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "dotnet/orleans",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "reactiveui/ReactiveUI",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "Unity-Technologies/UnityCsReference",
             "code_labels": [
                 "good first issue"
@@ -1882,11 +3891,27 @@
             "chore_labels": []
         },
         {
+            "name": "opserver/Opserver",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "Sonarr/Sonarr",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "HearthSim/Hearthstone-Deck-Tracker",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "localization"
+            ]
         },
         {
             "name": "dvf/blockchain",
@@ -1907,7 +3932,16 @@
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "Unity-Technologies/ml-agents",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "dotnet/BenchmarkDotNet",
@@ -1921,7 +3955,17 @@
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "localization"
+            ]
+        },
+        {
+            "name": "IdentityServer/IdentityServer4",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "gitextensions/gitextensions",
@@ -1931,18 +3975,44 @@
             "chore_labels": []
         },
         {
+            "name": "akkadotnet/akka.net",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "StackExchange/StackExchange.Redis",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "aspnet/Docs",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
         },
         {
             "name": "dotnet/cli",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "localization"
+            ]
+        },
+        {
+            "name": "dotnet/reactive",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "jaredpar/VsVim",
@@ -1959,25 +4029,73 @@
             "chore_labels": []
         },
         {
+            "name": "reactiveui/refit",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "EventStore/EventStore",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "neo-project/neo",
+            "code_labels": [],
+            "chore_labels": [
+                "translation"
+            ]
+        },
+        {
             "name": "moq/moq4",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
-        },
-        {
-            "name": "thestonefox/VRTK",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "dotnet/machinelearning",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "thestonefox/VRTK",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": [
+                "chore"
+            ]
+        },
+        {
+            "name": "PrismLibrary/Prism",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "domaindrivendev/Swashbuckle",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "OpenLiveWriter/OpenLiveWriter",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "ElectronNET/Electron.NET",
@@ -1994,6 +4112,90 @@
             "chore_labels": []
         },
         {
+            "name": "projectkudu/kudu",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "graphql-dotnet/graphql-dotnet",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "AngleSharp/AngleSharp",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "umbraco/Umbraco-CMS",
+            "code_labels": [],
+            "chore_labels": [
+                "localization"
+            ]
+        },
+        {
+            "name": "Microsoft/WindowsCommunityToolkit",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "scriptcs/scriptcs",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "jstedfast/MailKit",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "serilog/serilog",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "SixLabors/ImageSharp",
+            "code_labels": [],
+            "chore_labels": [
+                "chore"
+            ]
+        },
+        {
+            "name": "dotnet/standard",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "JimBobSquarePants/ImageProcessor",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "JoshClose/CsvHelper",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "cake-build/cake",
             "code_labels": [
                 "good first issue"
@@ -2005,7 +4207,9 @@
             "code_labels": [
                 "first-timers-only"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "xunit/xunit",
@@ -2015,11 +4219,28 @@
             "chore_labels": []
         },
         {
+            "name": "TheBerkin/rant",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation",
+                "localization"
+            ]
+        },
+        {
             "name": "OrchardCMS/OrchardCore",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "Microsoft/nodejstools",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "OfficeDev/Open-XML-SDK",
@@ -2029,11 +4250,32 @@
             "chore_labels": []
         },
         {
+            "name": "fluentmigrator/fluentmigrator",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "aspnet/Identity",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "ThreeMammals/Ocelot",
             "code_labels": [
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "kohsuke/winsw",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "quasar/QuasarRAT",
@@ -2043,11 +4285,21 @@
             "chore_labels": []
         },
         {
+            "name": "Microsoft/Git-Credential-Manager-for-Windows",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "MassTransit/MassTransit",
             "code_labels": [
                 "easy"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation",
+                "chore"
+            ]
         },
         {
             "name": "mathnet/mathnet-numerics",
@@ -2057,11 +4309,27 @@
             "chore_labels": []
         },
         {
+            "name": "domaindrivendev/Swashbuckle.AspNetCore",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "FluentNHibernate/fluent-nhibernate",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "XLabs/Xamarin-Forms-Labs",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "nhibernate/nhibernate-core",
@@ -2085,11 +4353,34 @@
             "chore_labels": []
         },
         {
+            "name": "square/okhttp",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "PhilJay/MPAndroidChart",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
             "name": "bumptech/glide",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "spring-projects/spring-framework",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "apache/incubator-dubbo",
@@ -2099,7 +4390,42 @@
             "chore_labels": []
         },
         {
+            "name": "facebook/fresco",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "netty/netty",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
             "name": "libgdx/libgdx",
+            "code_labels": [
+                "good first issue"
+            ],
+            "chore_labels": []
+        },
+        {
+            "name": "Netflix/Hystrix",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "loopj/android-async-http",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "proxyee-down-org/proxyee-down",
             "code_labels": [
                 "good first issue"
             ],
@@ -2113,18 +4439,97 @@
             "chore_labels": []
         },
         {
-            "name": "monkeyWie/proxyee-down",
-            "code_labels": [
-                "good first issue"
-            ],
-            "chore_labels": []
+            "name": "openzipkin/zipkin",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "apache/kafka",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "mybatis/mybatis-3",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "prestodb/presto",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "JakeWharton/RxBinding",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "mockito/mockito",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "square/dagger",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "dropwizard/dropwizard",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "facebook/buck",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "dropwizard/metrics",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
+        },
+        {
+            "name": "ChrisRM/material-theme-jetbrains",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "Netflix/eureka",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "OpenRefine/OpenRefine",
             "code_labels": [
                 "good first issue"
             ],
-            "chore_labels": []
+            "chore_labels": [
+                "documentation"
+            ]
         },
         {
             "name": "dbeaver/dbeaver",
@@ -2132,6 +4537,20 @@
                 "good first issue"
             ],
             "chore_labels": []
+        },
+        {
+            "name": "neo4j/neo4j",
+            "code_labels": [],
+            "chore_labels": [
+                "docs"
+            ]
+        },
+        {
+            "name": "oracle/graal",
+            "code_labels": [],
+            "chore_labels": [
+                "documentation"
+            ]
         }
     ]
 }

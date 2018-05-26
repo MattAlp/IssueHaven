@@ -3,24 +3,25 @@ from github.GithubException import UnknownObjectException
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import exists
 from github_searcher.models import Base, engine, Issue, Repo
-from github_searcher import config
+import config
 import json
+import os
 
 
 if __name__ == "__main__":
     print("[INFO] Token: " + config.TOKEN)
-    # enable_console_debug_logging()
+    print("[INFO] Database URL: " + config.DATABASE_URL)
     client = Github(config.TOKEN, per_page=config.SEARCH_PER_PAGE)
 
     Base.metadata.create_all(engine)
     session_factory = sessionmaker(bind=engine)
     session = session_factory()
 
-    with open('repos.json', "r") as f:
+    with open(os.path.join(config.PROJECT_ROOT, "repos.json"), "r") as f:
         data = json.load(f)
         for json_repo in data["repos"]:
             repo = client.get_repo(json_repo["name"])
-            if repo.has_issues:
+            if repo.has_issues and not repo.archived:
                 if not session.query(exists().where(Repo.repo_id == repo.id)).scalar():
                     session.add(Repo(repo_id=repo.id, name=repo.name, description=repo.description, url=repo.html_url,
                                      language=repo.language, created_at=repo.created_at,
@@ -38,6 +39,12 @@ if __name__ == "__main__":
                                 session.add(Issue(issue_id=issue.id, repo_id=repo.id, title=issue.title,
                                                   description=issue.body, url=issue.html_url, category="code",
                                                   created_at=issue.created_at, total_comments=issue.comments))
+                            else:
+                                # In case the issue already exists
+                                # existing_issue = session.query(Issue).filter_by(issue_id=issue.id).first()
+                                # existing_issue.total_comments = issue.comments
+                                pass
+                                # TODO add update/cleanup code
                     except UnknownObjectException:
                         print("[ERROR] Label %s wasn't found in repo %s" % (label, repo))
                 for label in json_repo["chore_labels"]:
@@ -54,7 +61,7 @@ if __name__ == "__main__":
                                 # In case the issue was already recorded by the code_labels loop, change the category to
                                 # reflect that the issue is actually a chore (i.e. documentation) and not related to
                                 # programming.
-                                Issue.query.filter_by(issue_id=issue.id).first().category = "chore"
+                                session.query(Issue).filter_by(issue_id=issue.id).first().category = "chore"
                     except UnknownObjectException:
                         print("[ERROR] Label %s wasn't found in repo %s" % (label, repo))
                 session.commit()

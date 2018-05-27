@@ -1,0 +1,36 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Welcome to Issue Haven!{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('static', filename='bootstrap-social.css')}}">
+{% endblock %}
+
+{% block navbar %}
+    <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Issue Haven</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="#">Find issues</a></li>
+          <li><a href="#">Help with documentation</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://github.com/MattAlp"><span class="glyphicon glyphicon-random"></span> Fork this project</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign in with Github</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+
+
+{% block content %}
+    <div class="container">
+        <img src = "{{ url_for('static', filename='HeaderImageExplanation.png') }}" class = "img-responsive center-block">
+        <div class="text-center">
+                    <a href="https://github.com" class="btn btn-success btn-lg" role="button">Sign in with Github</a>
+        </div>
+    </div>
+{% endblock %}

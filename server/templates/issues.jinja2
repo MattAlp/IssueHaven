@@ -1,5 +1,5 @@
 {% extends "bootstrap/base.html" %}
-{% block title %}Welcome to Issue Haven!{% endblock %}
+{% block title %}Find an issue{% endblock %}
 
 
 {% block navbar %}
@@ -20,12 +20,11 @@
 {% endblock %}
 
 
-
 {% block content %}
     <div class="container">
-        <img src = "{{ url_for('static', filename='HeaderImageExplanation.png') }}" class = "img-responsive center-block">
-        <div class="text-center">
-                    <a href="https://github.com" class="btn btn-success btn-lg" role="button">Sign in with Github</a>
-        </div>
-    </div>
+        <ol class="list-group">
+            {% for issue in issues %}
+                <li class="list-group-item"><a href={{ issue.url }}><b>{{issue.title|e}}</b></a></li>
+            {%  endfor %}
+        </ol>
 {% endblock %}

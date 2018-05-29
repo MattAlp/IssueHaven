@@ -5,16 +5,16 @@
 {% block navbar %}
     <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Issue Haven</a>
+            <a class="navbar-brand" href="#">Issue Haven</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="/issues">Find issues</a></li>
-          <li><a href="#">Help with documentation</a></li>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/issues">Find issues</a></li>
+            <li><a href="#">Help with documentation</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="https://github.com/MattAlp"><span class="glyphicon glyphicon-random"></span> Fork this project</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign in with Github</a></li>
+            <li><a href="https://github.com/MattAlp"><span class="glyphicon glyphicon-random"></span> Fork this project</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign in with Github</a></li>
         </ul>
     </div>
 {% endblock %}
@@ -22,9 +22,19 @@
 
 {% block content %}
     <div class="container">
-        <ol class="list-group">
+        <div class="row">
             {% for issue in issues %}
-                <li class="list-group-item"><a href={{ issue.url }}><b>{{issue.title|e}}</b></a></li>
+                <div class="col-md-4">
+                    <div class="card" style="width: 24rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>{{ issue.title|e }}</strong></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ issue.repo.name }}</h6>
+                            <p class="card-text">{{ issue.description|e|truncate(140) }}</p>
+                            <a href="{{ issue.url }}" class="btn btn-primary center-block">Check it out!</a>
+                        </div>
+                    </div>
+                </div>
             {%  endfor %}
-        </ol>
+        </div>
+    </div>
 {% endblock %}

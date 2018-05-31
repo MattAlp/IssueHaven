@@ -17,4 +17,4 @@ def show_issues(page):
     issues = db.session.query(Issue).paginate(page=page, per_page=15)
 
     # return render_template("issues.jinja2", issues=db.session.query(Issue).all())
-    return render_template("issues.jinja2", issues=issues.items)
+    return render_template("issues.jinja2", issues=issues)

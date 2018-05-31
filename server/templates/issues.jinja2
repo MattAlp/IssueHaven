@@ -19,22 +19,27 @@
     </div>
 {% endblock %}
 
+{#Fun fact: bootstrap 3 doesn't support cards, and is also coincidentally what Flask-Bootstrap uses haha :'(#}
 
 {% block content %}
     <div class="container">
-        <div class="row">
             {% for issue in issues %}
+                {% if (loop.index0 + 1 ) % 3 == 0 %}
+                    <div class="row">
+                {% endif %}
                 <div class="col-md-4">
-                    <div class="card" style="width: 24rem;">
+                    <div class="card border-primary" style="width: 24rem;">
                         <div class="card-body">
-                            <h5 class="card-title"><strong>{{ issue.title|e }}</strong></h5>
-                            <h6 class="card-subtitle mb-2 text-muted">{{ issue.repo.name }}</h6>
-                            <p class="card-text">{{ issue.description|e|truncate(140) }}</p>
-                            <a href="{{ issue.url }}" class="btn btn-primary center-block">Check it out!</a>
+                            <h4 class="card-title"><strong>{{issue.repo.name|e }}</strong></h4>
+                            <a href="{{ issue.url }}"><h5 class="card-subtitle mb-2 text-muted">{{ issue.title|e|truncate(60) }}</h5></a>
+                            <p class="card-text">{{ issue.description|e|truncate(60) }}</p>
+{#                            <a href="{{ issue.url }}" class="btn btn-primary center-block">Check it out!</a>#}
                         </div>
                     </div>
                 </div>
+                {% if (loop.index0 + 1 ) % 3 == 0 %}
+                    </div>
+                {% endif %}
             {%  endfor %}
-        </div>
     </div>
 {% endblock %}

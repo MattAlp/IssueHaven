@@ -1,0 +1,55 @@
+{% extends "custom_base.jinja2" %}
+
+{% block title %}
+    Find an issue
+{% endblock %}
+
+{% block styles %}
+    {{super()}}
+    <link rel="stylesheet"
+          href="{{url_for('static', filename='addons.css')}}">
+{% endblock %}
+
+{#Fun fact: bootstrap 3 doesn't support cards, and is also coincidentally what Flask-Bootstrap uses haha :'(#}
+{#Solved this issue by monkey-patching the library after importing because of how the function works#}
+
+{% block content %}
+    <main role="main" class="container text-center">
+        <div>
+            {% if language is not none %}
+                <h1>Find Issues written in {{ language|title }}</h1>
+            {% else %}
+                <h1>Find Issues</h1>
+            {%endif %}
+            <p class="lead">Pick any issue below and get coding!</p>
+        </div>
+    </main>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            {% for issue in issues.items %}
+                <div class="col-auto mb-3">
+                    <div class="card border-primary h-100" style="width: 20rem;">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>{{issue.repo.name|e }}<span class="badge badge-secondary badge-pill float-right">{{ issue.repo.language }}</span></b></h4>
+                            <a href="{{ issue.url }}"><h5 class="card-subtitle mb-2 text-muted">{{ issue.title|e|truncate(60) }}</h5></a>
+                            <p class="card-text"><b>{{ issue.category }} </b>| {{ issue.repo.total_stars }} stars, {{ issue.total_comments }} comments</p>
+                            <p class="card-text">{{ issue.description|e|truncate(60) }}</p>
+                        </div>
+                    </div>
+                </div>
+            {%  endfor %}
+            <div class="btn-group top17" role="group" aria-label="Previous/Next Page">
+                {% if issues.has_prev %}
+                    <a class="btn btn-primary" href={{ url_for("show_issues", page=issues.prev_num, language=language) }} role="button">Previous Page</a>
+                {% else %}
+                    <button type="button" class="btn btn-primary" disabled>Previous Page</button>
+                {% endif %}
+                {% if issues.has_next %}
+                    <a class="btn btn-primary" href={{ url_for("show_issues", page=issues.next_num, language=language) }} role="button">Next Page</a>
+                {% else %}
+                    <button type="button" class="btn btn-primary" disabled>Next Page</button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

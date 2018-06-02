@@ -10,7 +10,7 @@ CODE = ["first-timers-only", "low-hanging-fruit", "easy", "beginner", "good firs
 
 CHORE = ["translation", "documentation", "docs", "chore", "localization"]
 
-LANGUAGES = ["python", "typescript", "javascript", "ruby", "php", "c++", "go", "c#", "java"]
+LANGUAGES = ["python", "typescript", "javascript", "ruby", "php", "cpp", "go", "csharp", "java"]
 
 TOKEN = os.getenv("TOKEN")
 

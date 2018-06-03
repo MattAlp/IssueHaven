@@ -3,6 +3,7 @@ from github.GithubException import UnknownObjectException
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import exists
 from github_searcher.models import Base, engine, Issue, Repo
+from github_searcher.util import rate_limit_github
 import config
 import json
 import os
@@ -20,7 +21,12 @@ if __name__ == "__main__":
     with open(os.path.join(config.PROJECT_ROOT, "repos.json"), "r") as f:
         data = json.load(f)
         for json_repo in data["repos"]:
+            # PyGithub doesn't have internal waits for rate limiting so patching is the way to go for the time being
+            client.get_repo = rate_limit_github(client.get_repo, client)
             repo = client.get_repo(json_repo["name"])
+            repo.get_issues = rate_limit_github(repo.get_issues, client)
+            repo.get_label = rate_limit_github(repo.get_label, client)
+            # end patch
             if repo.has_issues and not repo.archived:
                 if not session.query(exists().where(Repo.repo_id == repo.id)).scalar():
                     session.add(Repo(repo_id=repo.id, name=repo.name, description=repo.description, url=repo.html_url,

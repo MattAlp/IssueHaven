@@ -5,14 +5,18 @@ import json
 import os
 
 
-def get_top_repos(language: str, limit: int = 1, update: bool = False):
+def get_top_repos(language: str, limit: int = None, update: bool = False):
     client = Github(config.TOKEN, per_page=100)
     repos = client.search_repositories("stars:>1 language:%s" % language)
-
+    if limit is not None:
+        repos = repos[:limit]
     if update:
         collected_repos = []
 
-    for repo in repos[:limit]:  # TODO add proper limiting code, this doesn't work when limit is set to 0
+    for repo in repos:  # TODO add proper limiting code, this doesn't work when limit is set to 0 (added above)
+        if client.rate_limiting[0] == 0:
+            print("Rate limit met, waiting until reset time")
+            time.sleep(client.rate_limiting_resettime - time.time())
         last_time = time.time()
         labels = repo.get_labels()
         code_overlap = list(set(label.name for label in labels) & set(config.CODE))
@@ -24,12 +28,12 @@ def get_top_repos(language: str, limit: int = 1, update: bool = False):
             if update:
                 collected_repos.append({"name": repo.full_name, "code_labels": code_overlap,
                                         "chore_labels": chore_overlap})
-        time.sleep(max(0.0, (2 / 30.0) - (time.time() - last_time)))
+        time.sleep(max(0.0, (2 / 30.0) - (time.time() - last_time)))  # math to add missing search rate limit feature
 
     # This code doesn't work completely and requires that a repos.json file is made with {"repos":[]} as the content
     # TODO fix this
     if update:
-        file = open(os.path.join(config.PROJECT_ROOT + "repos.json"), "r+")
+        file = open(os.path.join(config.PROJECT_ROOT, "repos.json"), "r+")
         if os.stat(file.name).st_size == 0:
             data = {"repos": []}
         else:
@@ -43,4 +47,4 @@ def get_top_repos(language: str, limit: int = 1, update: bool = False):
 if __name__ == "__main__":
     languages = config.LANGUAGES  # Want to run through some other languages? Just change this to a custom list!
     for language in languages:
-        get_top_repos(language, limit=200, update=True)
+        get_top_repos(language, update=True)

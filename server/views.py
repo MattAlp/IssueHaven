@@ -22,5 +22,5 @@ def show_issues(page=1, language=None):
             language = "c++"
         issues = db.session.query(Issue).order_by(Issue.created_at.desc(), Issue.total_comments.desc()).join(Issue.repo).order_by(Repo.total_stars.desc()).filter(Repo.language.ilike(language)).paginate(page=page, per_page=15)
     else:
-        issues = db.session.query(Issue).paginate(page=page, per_page=15)
+        issues = db.session.query(Issue).order_by(Issue.created_at.desc(), Issue.total_comments.desc()).join(Issue.repo).order_by(Repo.total_stars.desc()).paginate(page=page, per_page=15)
     return render_template("issues.jinja2", issues=issues, language=language)

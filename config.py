@@ -1,6 +1,5 @@
 import os
 
-
 # "Help wanted" is intentionally not included, far too vague
 # Same applies for the "Bug" label
 CODE = ["first-timers-only", "low-hanging-fruit", "easy", "beginner", "good first issue", "easy-pick",
@@ -10,7 +9,8 @@ CODE = ["first-timers-only", "low-hanging-fruit", "easy", "beginner", "good firs
 
 CHORE = ["translation", "documentation", "docs", "chore", "localization"]
 
-LANGUAGES = ["python", "typescript", "javascript", "ruby", "php", "cpp", "go", "csharp", "java"]
+LANGUAGES = ["javascript", "python", "java", "ruby", "php", "cpp", "csharp", "go", "typescript", "swift", "scala",
+             "objc"]
 
 TOKEN = os.getenv("TOKEN")
 

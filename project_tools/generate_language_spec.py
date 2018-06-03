@@ -13,3 +13,6 @@ if __name__ == "__main__":
             if aliases is not None:
                 for alias in aliases:
                     print("\t" + alias)
+            color = parsed_langs.get(lang).get("color")
+            if color is not None:
+                print("{ background-color: %s }" % color)

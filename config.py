@@ -12,6 +12,9 @@ CHORE = ["translation", "documentation", "docs", "chore", "localization"]
 LANGUAGES = ["javascript", "python", "java", "ruby", "php", "cpp", "csharp", "go", "typescript", "swift", "scala",
              "objc"]
 
+MAPPINGS = {"csharp": "C#", "cpp": "C++", "cplusplus": "C++", "objectivec": "Objective-C", "objc": "Objective-C",
+            "py": "Python", "rb": "Ruby", "js": "JavaScript", "ts": "TypeScript"}
+
 TOKEN = os.getenv("TOKEN")
 
 SEARCH_PER_PAGE = 100

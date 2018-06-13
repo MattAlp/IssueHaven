@@ -27,9 +27,8 @@ query = """
 
 def get_issues(name: str, owner: str, labels: List[str], next: str = False):
     headers = {'Authorization': 'token %s' % config.TOKEN}
-    generated_guery = query.format_map(locals()).replace("'", "\"")
-    # print({"query": query.format_map(kwargs)})
-    print(requests.post(GRAPHQL_URL, json={"query": generated_guery}, headers=headers).json())
+    generated_query = query.format_map(locals()).replace("'", "\"")
+    print(requests.post(GRAPHQL_URL, json={"query": generated_query}, headers=headers).json())
 
 
 if __name__ == "__main__":

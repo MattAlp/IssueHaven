@@ -14,7 +14,7 @@ query = """
     primaryLanguage {{
       name
     }}
-    issues(first: 100, labels: {labels}, states:OPEN){{
+    issues(first: 100, labels: {labels}, after: {after}, states:OPEN){{
       nodes{{
         title
         url
@@ -29,17 +29,23 @@ query = """
 """
 
 
-def get_issues(name: str, owner: str, labels: List[str], next: str = None):
+def get_issues(name: str, owner: str, labels: List[str], after: str = None):
+    if after is not None:
+        after = "\"" + after + "\""
+    else:
+        after = "null"
     headers = {'Authorization': 'token %s' % config.TOKEN}
     generated_query = query.format_map(locals()).replace("'", "\"")
     query_results = requests.post(GRAPHQL_URL, json={"query": generated_query}, headers=headers).json()
-    print(query_results)
+    return query_results
 
 
 if __name__ == "__main__":
-    get_issues(name="ansible", owner="ansible", labels=["doc"])
-    # with open(os.path.join(config.PROJECT_ROOT, "repos.json"), "r") as f:
-    #     data = json.load(f)
-    #     for json_repo in data["repos"]:
-    #         owner, name = json_repo["name"].split("/")
-    #         get_issues(owner=owner, name=name, labels=str(json_repo["code_labels"]))
+    data = get_issues(name="ansible", owner="ansible", labels=["docs"])
+    for issue in data["data"]["repository"]["issues"]["nodes"]:
+        print(issue["title"])
+    print("-----------------------")
+    if data["data"]["repository"]["issues"]["pageInfo"]["hasNextPage"]:
+        data = get_issues(name="ansible", owner="ansible", after=data["data"]["repository"]["issues"]["pageInfo"]["endCursor"], labels=["docs"])
+    for issue in data["data"]["repository"]["issues"]["nodes"]:
+        print(issue["title"])

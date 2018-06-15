@@ -1,8 +1,9 @@
 import requests
 import config
-
+import json
 
 from typing import List
+from collections import namedtuple
 
 
 GRAPHQL_URL = "https://api.github.com/graphql"
@@ -36,19 +37,24 @@ class GraphQLQuery(object):
     def __init__(self, **kwargs):
         self.json = requests.post(GRAPHQL_URL, json={"query": self.query_base.format_map(kwargs).replace("'", "\"")},
                                   headers=self.headers).json()["data"]
+        self.data = namedtuple('Field', self.json.keys())(*self.json.values())
+        print(self.data)
+
+    def _convert(self, dictionary):
+        return namedtuple('Field', dictionary.keys())(**dictionary)
 
 
 class RepoIssuesQuery(GraphQLQuery):
     query_base = REPO_ISSUES_QUERY
 
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        self.issues = type('', (), {})()  # https://stackoverflow.com/questions/2280334/shortest-way-of-creating-an-object-with-arbitrary-attributes-in-python
-        self.issues.nodes = self.json["repository"]["issues"]["nodes"]
-        self.issues.pageInfo = self.json["repository"]["issues"]["pageInfo"]
-        self.repo = type('', (), {})()
-        self.repo.id = self.json["repository"]["databaseId"]
-        self.repo.language = self.json["repository"]["primaryLanguage"]["name"]
+    # def __init__(self, **kwargs):
+    #     super().__init__(**kwargs)
+    #     self.issues = type('', (), {})()  # https://stackoverflow.com/questions/2280334/shortest-way-of-creating-an-object-with-arbitrary-attributes-in-python
+    #     self.issues.nodes = self.json["repository"]["issues"]["nodes"]
+    #     self.issues.pageInfo = self.json["repository"]["issues"]["pageInfo"]
+    #     self.repo = type('', (), {})()
+    #     self.repo.id = self.json["repository"]["databaseId"]
+    #     self.repo.language = self.json["repository"]["primaryLanguage"]["name"]
 
 
 def get_issues(name: str, owner: str, labels: List[str], endCursor: str = None):
@@ -64,4 +70,3 @@ def get_issues(name: str, owner: str, labels: List[str], endCursor: str = None):
 
 if __name__ == "__main__":
     r = RepoIssuesQuery(name="ansible", owner="ansible", labels=["docs"], endCursor="null")
-    print(r.repo.language)

@@ -37,7 +37,7 @@ if __name__ == "__main__":
                 for label in json_repo["code_labels"]:
                     try:
                         issues = repo.get_issues(labels=[repo.get_label(label)], state="open", assignee="none")
-                        for index, issue in enumerate(issues):
+                        for issue in issues:
                             info = "[INFO] Repo ID:%s, Issue ID:%s, Issue Title:%s, URL:%s"
                             print(info % (repo.id, issue.id, issue.title, issue.html_url))
 
@@ -56,7 +56,7 @@ if __name__ == "__main__":
                 for label in json_repo["chore_labels"]:
                     try:
                         issues = repo.get_issues(labels=[repo.get_label(label)], state="open", assignee="none")
-                        for index, issue in enumerate(issues):
+                        for issue in issues:
                             info = "[INFO] Repo ID:%s, Issue ID:%s, Issue Title:%s, URL:%s"
                             print(info % (repo.id, issue.id, issue.title, issue.html_url))
                             if not session.query(exists().where(Issue.issue_id == issue.id)).scalar():

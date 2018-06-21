@@ -153,7 +153,9 @@ def get_issue_category(issue_labels: List[str]):
     for category, category_labels in config.CATEGORIES.items():
         if any(i in issue_labels for i in category_labels):
             return category
-    raise ValueError("None of the issue labels fell under %s" % str(config.CATEGORIES.keys()))
+    raise ValueError(
+        "None of the issue labels fell under %s" % str(config.CATEGORIES.keys())
+    )
 
 
 if __name__ == "__main__":
@@ -224,7 +226,9 @@ if __name__ == "__main__":
                         for issue in issues.repository.issues.nodes:
                             if issue["assignees"]["totalCount"] == 0:
                                 print(repo["nameWithOwner"], issue["title"])
-                                issue_labels = [label["name"] for label in issue["labels"]["nodes"]]
+                                issue_labels = [
+                                    label["name"] for label in issue["labels"]["nodes"]
+                                ]
                                 session.add(
                                     Issue(
                                         issue_id=issue["databaseId"],

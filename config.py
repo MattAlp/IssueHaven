@@ -29,7 +29,10 @@ CODE = [
 
 CHORE = ["translation", "documentation", "docs", "chore", "localization"]
 
-CATEGORIES = {"chore": CHORE, "code": CODE}  # Categories are iterated over first to last (highest to lowest priority)
+CATEGORIES = {
+    "chore": CHORE,
+    "code": CODE,
+}  # Categories are iterated over first to last (highest to lowest priority)
 
 LABELS = sorted({x for v in CATEGORIES.values() for x in v})  # From Stack Overflow
 

@@ -110,10 +110,15 @@ def get_issues(fullname: str, after: str = None, labels=List[str]):
   repository(owner: "%(owner)s", name:"%(name)s"){
     issues(states:OPEN, first:100, labels:%(labels)s, after:%(endCursor)s){
       nodes{
+        assignees{
+          totalCount
+        }
+        databaseId
         title
         bodyText
         url
-        assignees{
+        createdAt
+        comments{
           totalCount
         }
       }
@@ -192,6 +197,19 @@ if __name__ == "__main__":
                         )
                         for issue in issues.repository.issues.nodes:
                             print(repo["nameWithOwner"], issue["title"])  # TODO add issues to database
+                            if issue["assignees"]["totalCount"] == 0:
+                                session.add(
+                                    Issue(
+                                        issue_id=issue["databaseId"],
+                                        repo_id=repo["databaseId"],
+                                        title=issue["title"],
+                                        description=issue["bodyText"],
+                                        url=issue["url"],
+                                        category="code",  # TODO fix how categories are assigned
+                                        created_at=datetime.strptime(issue["createdAt"], "%Y-%m-%dT%H:%M:%SZ"),
+                                        total_comments=issue["comments"]["totalCount"],
+                                    )
+                                )
                         more_issues = issues.repository.issues.pageInfo.hasNextPage
                         if more_issues:
                             next_issues_page = (

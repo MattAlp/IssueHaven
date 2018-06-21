@@ -6,7 +6,9 @@ from typing import List
 
 
 class PyJSON(object):
-
+    """
+    Modified PyJSON class with _repr_ added, based on a StackOverflow answer
+    """
     def __init__(self, d):
         if type(d) is str:
             d = json.loads(d)

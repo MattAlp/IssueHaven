@@ -29,6 +29,8 @@ CODE = [
 
 CHORE = ["translation", "documentation", "docs", "chore", "localization"]
 
+LABELS = CODE + CHORE
+
 LANGUAGES = [
     "javascript",
     "python",
@@ -67,3 +69,5 @@ PROJECT_ROOT = os.path.dirname(__file__)
 DATA_FOLDER = os.path.join(PROJECT_ROOT, "data")
 
 DATABASE_URL = "sqlite:///" + os.path.join(DATA_FOLDER, "github_data.db")
+
+GRAPHQL_API_URL = "https://api.github.com/graphql"

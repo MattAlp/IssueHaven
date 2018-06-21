@@ -3,6 +3,9 @@ import time
 import config
 import requests
 from typing import List
+from github_searcher.models import Base, engine, Issue, Repo
+from sqlalchemy.orm import sessionmaker
+from datetime import datetime
 
 
 class PyJSON(object):
@@ -65,7 +68,18 @@ def get_repos(language: str, after: str = None, labels=List[str]):
     repositoryCount
     nodes {
       ... on Repository {
+        databaseId
         nameWithOwner
+        description
+        url
+        primaryLanguage{
+          name
+        }
+        createdAt
+        stargazers{
+          totalCount
+        }
+        isArchived
         issues(states: OPEN, labels: %(labels)s){
           totalCount
         }
@@ -126,8 +140,33 @@ def get_issues(fullname: str, after: str = None, labels=List[str]):
 
 if __name__ == "__main__":
     print("Config Token: %s" % config.TOKEN)
+    print("Database URL: " + config.DATABASE_URL)
+
+    Base.metadata.create_all(engine)
+    session_factory = sessionmaker(bind=engine)
+    session = session_factory()
+
     for language in config.LANGUAGES:
         print("\nLanguage: " + language)
+
+        if language.lower() in config.MAPPINGS:
+            mapped_language = config.MAPPINGS[language]
+        else:
+            mapped_language = language
+
+        old_issues = session.query(Issue).join(Issue.repo).filter(Repo.language.ilike(mapped_language)).all()
+        print("Deleting %d issues in %s" % (len(old_issues), language))
+        for issue in old_issues:
+            session.delete(issue)
+        print("Deleted issues!")
+
+        old_repos = session.query(Repo).filter(Repo.language.ilike(mapped_language)).all()
+        print("Deleting %d repos in %s" % (len(old_repos), language))
+        for repo in old_repos:
+            session.delete(repo)
+        print("Deleted repos!")
+
+        print("Starting search!\n")
         more_repos = True
         next_repo_page = None
         while more_repos:
@@ -135,7 +174,14 @@ if __name__ == "__main__":
                 language, labels=config.LABELS, after=next_repo_page
             )
             for repo in repo_search.search.nodes:
-                if repo["issues"]["totalCount"] > 0:
+                if not repo["isArchived"] and repo["issues"]["totalCount"] > 0:
+                    session.add(Repo(repo_id=repo["databaseId"],
+                                     name=repo["nameWithOwner"],
+                                     description=repo["description"],
+                                     url=repo["url"],
+                                     language=repo["primaryLanguage"]["name"],
+                                     created_at=datetime.strptime(repo["createdAt"], "%Y-%m-%dT%H:%M:%SZ"),
+                                     total_stars=repo["stargazers"]["totalCount"]))
                     more_issues = True
                     next_issues_page = None
                     while more_issues:
@@ -145,7 +191,7 @@ if __name__ == "__main__":
                             after=next_issues_page,
                         )
                         for issue in issues.repository.issues.nodes:
-                            print(repo["nameWithOwner"], issue["title"])
+                            print(repo["nameWithOwner"], issue["title"])  # TODO add issues to database
                         more_issues = issues.repository.issues.pageInfo.hasNextPage
                         if more_issues:
                             next_issues_page = (
@@ -154,3 +200,7 @@ if __name__ == "__main__":
             more_repos = repo_search.search.pageInfo.hasNextPage
             if more_repos:
                 next_repo_page = repo_search.search.pageInfo.endCursor
+        print("Updating repository for %s" % language)
+        session.commit()
+
+    session.close()

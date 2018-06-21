@@ -12,6 +12,7 @@ class PyJSON(object):
     """
     Modified PyJSON class with _repr_ added, based on a StackOverflow answer
     """
+
     def __init__(self, d):
         if type(d) is str:
             d = json.loads(d)
@@ -159,13 +160,20 @@ if __name__ == "__main__":
         else:
             mapped_language = language
 
-        old_issues = session.query(Issue).join(Issue.repo).filter(Repo.language.ilike(mapped_language)).all()
+        old_issues = (
+            session.query(Issue)
+            .join(Issue.repo)
+            .filter(Repo.language.ilike(mapped_language))
+            .all()
+        )
         print("Deleting %d issues in %s" % (len(old_issues), language))
         for issue in old_issues:
             session.delete(issue)
         print("Deleted issues!")
 
-        old_repos = session.query(Repo).filter(Repo.language.ilike(mapped_language)).all()
+        old_repos = (
+            session.query(Repo).filter(Repo.language.ilike(mapped_language)).all()
+        )
         print("Deleting %d repos in %s" % (len(old_repos), language))
         for repo in old_repos:
             session.delete(repo)
@@ -180,13 +188,19 @@ if __name__ == "__main__":
             )
             for repo in repo_search.search.nodes:
                 if not repo["isArchived"] and repo["issues"]["totalCount"] > 0:
-                    session.add(Repo(repo_id=repo["databaseId"],
-                                     name=repo["nameWithOwner"],
-                                     description=repo["description"],
-                                     url=repo["url"],
-                                     language=repo["primaryLanguage"]["name"],
-                                     created_at=datetime.strptime(repo["createdAt"], "%Y-%m-%dT%H:%M:%SZ"),
-                                     total_stars=repo["stargazers"]["totalCount"]))
+                    session.add(
+                        Repo(
+                            repo_id=repo["databaseId"],
+                            name=repo["nameWithOwner"],
+                            description=repo["description"],
+                            url=repo["url"],
+                            language=repo["primaryLanguage"]["name"],
+                            created_at=datetime.strptime(
+                                repo["createdAt"], "%Y-%m-%dT%H:%M:%SZ"
+                            ),
+                            total_stars=repo["stargazers"]["totalCount"],
+                        )
+                    )
                     more_issues = True
                     next_issues_page = None
                     while more_issues:
@@ -196,7 +210,9 @@ if __name__ == "__main__":
                             after=next_issues_page,
                         )
                         for issue in issues.repository.issues.nodes:
-                            print(repo["nameWithOwner"], issue["title"])  # TODO add issues to database
+                            print(
+                                repo["nameWithOwner"], issue["title"]
+                            )  # TODO add issues to database
                             if issue["assignees"]["totalCount"] == 0:
                                 session.add(
                                     Issue(
@@ -206,7 +222,9 @@ if __name__ == "__main__":
                                         description=issue["bodyText"],
                                         url=issue["url"],
                                         category="code",  # TODO fix how categories are assigned
-                                        created_at=datetime.strptime(issue["createdAt"], "%Y-%m-%dT%H:%M:%SZ"),
+                                        created_at=datetime.strptime(
+                                            issue["createdAt"], "%Y-%m-%dT%H:%M:%SZ"
+                                        ),
                                         total_comments=issue["comments"]["totalCount"],
                                     )
                                 )

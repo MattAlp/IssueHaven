@@ -2,6 +2,7 @@ import time
 
 
 def rate_limit_github(func, client):
+
     def wrapped():
         print(client.rate_limiting)
         if client.rate_limiting[0] <= 5:
@@ -11,4 +12,5 @@ def rate_limit_github(func, client):
             except:
                 pass
         return func
+
     return wrapped()

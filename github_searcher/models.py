@@ -27,7 +27,7 @@ class Issue(Base):
     __tablename__ = "issues"
 
     issue_id = Column(Integer, primary_key=True)
-    repo_id = Column(Integer, ForeignKey('repos.repo_id'))
+    repo_id = Column(Integer, ForeignKey("repos.repo_id"))
     title = Column(String)
     description = Column(String)
     url = Column(String)
@@ -39,4 +39,3 @@ class Issue(Base):
 
     def __repr__(self):
         return "<Issue(title='%s', url='%s')>" % (self.title, self.url)
-

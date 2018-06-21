@@ -114,6 +114,11 @@ def get_issues(fullname: str, after: str = None, labels=List[str]):
         assignees{
           totalCount
         }
+        labels(first:100 after:null){
+          nodes{
+            name
+          }
+        }
         databaseId
         title
         bodyText
@@ -142,6 +147,13 @@ def get_issues(fullname: str, after: str = None, labels=List[str]):
         config.GRAPHQL_API_URL, json={"query": built_query}, headers=config.HEADER
     ).json()["data"]
     return PyJSON(data)
+
+
+def get_issue_category(issue_labels: List[str]):
+    for category, category_labels in config.CATEGORIES.items():
+        if any(i in issue_labels for i in category_labels):
+            return category
+    raise ValueError("None of the issue labels fell under %s" % str(config.CATEGORIES.keys()))
 
 
 if __name__ == "__main__":
@@ -210,10 +222,9 @@ if __name__ == "__main__":
                             after=next_issues_page,
                         )
                         for issue in issues.repository.issues.nodes:
-                            print(
-                                repo["nameWithOwner"], issue["title"]
-                            )  # TODO add issues to database
                             if issue["assignees"]["totalCount"] == 0:
+                                print(repo["nameWithOwner"], issue["title"])
+                                issue_labels = [label["name"] for label in issue["labels"]["nodes"]]
                                 session.add(
                                     Issue(
                                         issue_id=issue["databaseId"],
@@ -221,7 +232,7 @@ if __name__ == "__main__":
                                         title=issue["title"],
                                         description=issue["bodyText"],
                                         url=issue["url"],
-                                        category="code",  # TODO fix how categories are assigned
+                                        category=get_issue_category(issue_labels),
                                         created_at=datetime.strptime(
                                             issue["createdAt"], "%Y-%m-%dT%H:%M:%SZ"
                                         ),

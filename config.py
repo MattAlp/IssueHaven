@@ -60,6 +60,8 @@ MAPPINGS = {
 
 TOKEN = os.getenv("TOKEN")
 
+HEADER = {"Authorization": "token %s" % TOKEN}
+
 SEARCH_PER_PAGE = 100
 
 DEFAULT_RESULTS_PER_PAGE = 30

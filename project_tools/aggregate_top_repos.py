@@ -13,7 +13,11 @@ def get_top_repos(language: str, limit: int = None, update: bool = False):
     if update:
         collected_repos = []
 
-    for repo in repos:  # TODO add proper limiting code, this doesn't work when limit is set to 0 (added above)
+    for (
+        repo
+    ) in (
+        repos
+    ):  # TODO add proper limiting code, this doesn't work when limit is set to 0 (added above)
         if client.rate_limiting[0] == 0:
             print("Rate limit met, waiting until reset time")
             time.sleep(client.rate_limiting_resettime - time.time())
@@ -24,11 +28,21 @@ def get_top_repos(language: str, limit: int = None, update: bool = False):
 
         if len(code_overlap) != 0 or len(chore_overlap) != 0:
             info = "Repo:%s, Stars:%s, Code Labels:%s, Chore Labels:%s"
-            print(info % (repo.full_name, repo.stargazers_count, code_overlap, chore_overlap))
+            print(
+                info
+                % (repo.full_name, repo.stargazers_count, code_overlap, chore_overlap)
+            )
             if update:
-                collected_repos.append({"name": repo.full_name, "code_labels": code_overlap,
-                                        "chore_labels": chore_overlap})
-        time.sleep(max(0.0, (2 / 30.0) - (time.time() - last_time)))  # math to add missing search rate limit feature
+                collected_repos.append(
+                    {
+                        "name": repo.full_name,
+                        "code_labels": code_overlap,
+                        "chore_labels": chore_overlap,
+                    }
+                )
+        time.sleep(
+            max(0.0, (2 / 30.0) - (time.time() - last_time))
+        )  # math to add missing search rate limit feature
 
     # This code doesn't work completely and requires that a repos.json file is made with {"repos":[]} as the content
     # TODO fix this
@@ -45,6 +59,8 @@ def get_top_repos(language: str, limit: int = None, update: bool = False):
 
 
 if __name__ == "__main__":
-    languages = config.LANGUAGES  # Want to run through some other languages? Just change this to a custom list!
+    languages = (
+        config.LANGUAGES
+    )  # Want to run through some other languages? Just change this to a custom list!
     for language in languages:
         get_top_repos(language, update=True)

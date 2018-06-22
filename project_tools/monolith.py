@@ -12,6 +12,7 @@ class PyJSON(object):
     """
     Modified PyJSON class with _repr_ added, based on a StackOverflow answer
     """
+
     def __init__(self, d):
         if type(d) is str:
             d = json.loads(d)
@@ -110,10 +111,20 @@ def get_issues(fullname: str, after: str = None, labels=List[str]):
   repository(owner: "%(owner)s", name:"%(name)s"){
     issues(states:OPEN, first:100, labels:%(labels)s, after:%(endCursor)s){
       nodes{
+        assignees{
+          totalCount
+        }
+        labels(first:100 after:null){
+          nodes{
+            name
+          }
+        }
+        databaseId
         title
         bodyText
         url
-        assignees{
+        createdAt
+        comments{
           totalCount
         }
       }
@@ -138,6 +149,15 @@ def get_issues(fullname: str, after: str = None, labels=List[str]):
     return PyJSON(data)
 
 
+def get_issue_category(issue_labels: List[str]):
+    for category, category_labels in config.CATEGORIES.items():
+        if any(i in issue_labels for i in category_labels):
+            return category
+    raise ValueError(
+        "None of the issue labels fell under %s" % str(config.CATEGORIES.keys())
+    )
+
+
 if __name__ == "__main__":
     print("Config Token: %s" % config.TOKEN)
     print("Database URL: " + config.DATABASE_URL)
@@ -154,13 +174,20 @@ if __name__ == "__main__":
         else:
             mapped_language = language
 
-        old_issues = session.query(Issue).join(Issue.repo).filter(Repo.language.ilike(mapped_language)).all()
+        old_issues = (
+            session.query(Issue)
+            .join(Issue.repo)
+            .filter(Repo.language.ilike(mapped_language))
+            .all()
+        )
         print("Deleting %d issues in %s" % (len(old_issues), language))
         for issue in old_issues:
             session.delete(issue)
         print("Deleted issues!")
 
-        old_repos = session.query(Repo).filter(Repo.language.ilike(mapped_language)).all()
+        old_repos = (
+            session.query(Repo).filter(Repo.language.ilike(mapped_language)).all()
+        )
         print("Deleting %d repos in %s" % (len(old_repos), language))
         for repo in old_repos:
             session.delete(repo)
@@ -175,13 +202,19 @@ if __name__ == "__main__":
             )
             for repo in repo_search.search.nodes:
                 if not repo["isArchived"] and repo["issues"]["totalCount"] > 0:
-                    session.add(Repo(repo_id=repo["databaseId"],
-                                     name=repo["nameWithOwner"],
-                                     description=repo["description"],
-                                     url=repo["url"],
-                                     language=repo["primaryLanguage"]["name"],
-                                     created_at=datetime.strptime(repo["createdAt"], "%Y-%m-%dT%H:%M:%SZ"),
-                                     total_stars=repo["stargazers"]["totalCount"]))
+                    session.add(
+                        Repo(
+                            repo_id=repo["databaseId"],
+                            name=repo["nameWithOwner"],
+                            description=repo["description"],
+                            url=repo["url"],
+                            language=repo["primaryLanguage"]["name"],
+                            created_at=datetime.strptime(
+                                repo["createdAt"], "%Y-%m-%dT%H:%M:%SZ"
+                            ),
+                            total_stars=repo["stargazers"]["totalCount"],
+                        )
+                    )
                     more_issues = True
                     next_issues_page = None
                     while more_issues:
@@ -191,7 +224,25 @@ if __name__ == "__main__":
                             after=next_issues_page,
                         )
                         for issue in issues.repository.issues.nodes:
-                            print(repo["nameWithOwner"], issue["title"])  # TODO add issues to database
+                            if issue["assignees"]["totalCount"] == 0:
+                                print(repo["nameWithOwner"], issue["title"])
+                                issue_labels = [
+                                    label["name"] for label in issue["labels"]["nodes"]
+                                ]
+                                session.add(
+                                    Issue(
+                                        issue_id=issue["databaseId"],
+                                        repo_id=repo["databaseId"],
+                                        title=issue["title"],
+                                        description=issue["bodyText"],
+                                        url=issue["url"],
+                                        category=get_issue_category(issue_labels),
+                                        created_at=datetime.strptime(
+                                            issue["createdAt"], "%Y-%m-%dT%H:%M:%SZ"
+                                        ),
+                                        total_comments=issue["comments"]["totalCount"],
+                                    )
+                                )
                         more_issues = issues.repository.issues.pageInfo.hasNextPage
                         if more_issues:
                             next_issues_page = (

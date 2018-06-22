@@ -1,4 +1,4 @@
-from github_searcher.models import Base, engine, Issue, Repo
+from github_searcher.models import Base, engine, Repo
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":

@@ -30,7 +30,7 @@
                 <div class="col-auto mb-3">
                     <div class="card border-primary h-100" style="width: 20rem;">
                         <div class="card-body">
-                            <h4 class="card-title"><b>{{issue.repo.name|e }}<span class="badge badge-primary badge-pill float-right">{{ issue.repo.language }}</span></b></h4>
+                            <h5 class="card-title"><b>{{issue.repo.name|e }}<span class="badge badge-primary badge-pill float-right">{{ issue.repo.language }}</span></b></h5>
                             <a href="{{ issue.url }}"><h5 class="card-subtitle mb-2 text-muted">{{ issue.title|e|truncate(60) }}</h5></a>
                             <p class="card-text"><b>{{ issue.category }} </b>| {{ issue.repo.total_stars }} stars, {{ issue.total_comments }} comments</p>
                             <p class="card-text">{{ issue.description|e|truncate(60) }}</p>

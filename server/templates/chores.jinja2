@@ -30,7 +30,7 @@
                 <div class="col-auto mb-3">
                     <div class="card border-primary h-100" style="width: 20rem;">
                         <div class="card-body">
-                            <h4 class="card-title"><b>{{chore.repo.name|e }}<span class="badge badge-primary badge-pill float-right">{{ chore.repo.language }}</span></b></h4>
+                            <h5 class="card-title"><b>{{chore.repo.name|e }}<span class="badge badge-primary badge-pill float-right">{{ chore.repo.language }}</span></b></h5>
                             <a href="{{ chore.url }}"><h5 class="card-subtitle mb-2 text-muted">{{ chore.title|e|truncate(60) }}</h5></a>
                             <p class="card-text"><b>{{ chore.category }} </b>| {{ chore.repo.total_stars }} stars, {{ chore.total_comments }} comments</p>
                             <p class="card-text">{{ chore.description|e|truncate(60) }}</p>

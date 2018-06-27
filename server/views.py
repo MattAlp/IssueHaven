@@ -13,10 +13,12 @@ def index():
 @app.route("/issues/<int:page>")
 @app.route("/issues/<string:language>")
 @app.route("/issues/<string:language>/<int:page>")
-def show_issues(page=1, language=None):
+def show_issues(page=1, language: str=None):
     if language is not None:
         if language.lower() in config.MAPPINGS:
-            language = config.MAPPINGS[language]
+            language = config.MAPPINGS[language.lower()]
+        else:
+            language = language.capitalize()
         issues = (
             db.session.query(Issue)
             .filter(Issue.category == "code")

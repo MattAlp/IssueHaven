@@ -48,7 +48,7 @@ LANGUAGES = [
     "typescript",
     "swift",
     "scala",
-    "objc",
+    "objc"
 ]
 
 MAPPINGS = {
@@ -61,6 +61,26 @@ MAPPINGS = {
     "rb": "Ruby",
     "js": "JavaScript",
     "ts": "TypeScript",
+    "javascript": "JavaScript",
+    "typescript": "TypeScript",
+    "php": "PHP"
+}
+
+# TODO add custom colour support via CSS to issue pages
+
+COLOUR_MAPPINGS = {
+    "JavaScript": "F0DB4F",
+    "Python": "#306998",
+    "Java": "#FF8C00",
+    "Ruby": "#CC342D",
+    "PHP": "#8892BE",
+    "C++": "#ffffff",
+    "C#": "#ffffff",
+    "Go": "#34A853",
+    "TypeScript": "#007ACC",
+    "Swift": "#FC3F27",
+    "Scala": "#371777",
+    "Objective-C": "#8E43E7"
 }
 
 TOKEN = os.getenv("TOKEN")

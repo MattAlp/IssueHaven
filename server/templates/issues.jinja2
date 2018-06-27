@@ -1,7 +1,7 @@
 {% extends "custom_base.jinja2" %}
 
 {% block title %}
-    Find an issue
+    Help with Code
 {% endblock %}
 
 {% block styles %}
@@ -10,16 +10,13 @@
           href="{{url_for('static', filename='addons.css')}}">
 {% endblock %}
 
-{# Bootstrap 3 doesn't support cards, and is also coincidentally what Flask-Bootstrap uses #}
-{# Solved this issue by monkey-patching the library after importing because of how the function works #}
-
 {% block content %}
     <main role="main" class="container text-center">
         <div>
             {% if language is not none %}
-                <h1>Find Issues written in {{ language }}</h1>
+                <h1>Help projects written in {{ language }}</h1>
             {% else %}
-                <h1>Find Issues</h1>
+                <h1>Help with Code</h1>
             {%endif %}
             <p class="lead">Pick any issue below and get coding!</p>
         </div>

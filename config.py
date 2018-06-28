@@ -1,6 +1,6 @@
 import os
 
-DEV_MODE = False  # TODO add custom configs based on DEV_MODE variable
+DEV_MODE = True  # TODO add custom configs based on DEV_MODE variable
 
 
 # "Help wanted" is intentionally not included, far too vague

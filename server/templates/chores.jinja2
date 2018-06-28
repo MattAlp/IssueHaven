@@ -1,7 +1,7 @@
 {% extends "custom_base.jinja2" %}
 
 {% block title %}
-    Find a chore
+    Help with Documentation and Chores
 {% endblock %}
 
 {% block styles %}
@@ -10,16 +10,13 @@
           href="{{url_for('static', filename='addons.css')}}">
 {% endblock %}
 
-{#Fun fact: bootstrap 3 doesn't support cards, and is also coincidentally what Flask-Bootstrap uses haha :'(#}
-{#Solved this issue by monkey-patching the library after importing because of how the function works#}
-
 {% block content %}
     <main role="main" class="container text-center">
         <div>
             {% if language is not none %}
-                <h1>Find Docs and Chores written in {{ language|title }}</h1>
+                <h1>Help projects written in {{ language }} with Documentation and Chores</h1>
             {% else %}
-                <h1>Find Docs and Chores</h1>
+                <h1>Help projects with Documentation and Chores</h1>
             {%endif %}
             <p class="lead">Pick any task below and get working!</p>
         </div>
@@ -38,18 +35,20 @@
                     </div>
                 </div>
             {%  endfor %}
-            <div class="btn-group top17" role="group" aria-label="Previous/Next Page">
-                {% if chores.has_prev %}
-                    <a class="btn btn-primary" href={{ url_for("show_chores", page=chores.prev_num, language=language) }} role="button">Previous Page</a>
-                {% else %}
-                    <button type="button" class="btn btn-primary" disabled>Previous Page</button>
-                {% endif %}
-                {% if chores.has_next %}
-                    <a class="btn btn-primary" href={{ url_for("show_chores", page=chores.next_num, language=language) }} role="button">Next Page</a>
-                {% else %}
-                    <button type="button" class="btn btn-primary" disabled>Next Page</button>
-                {% endif %}
-            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="btn-group top17 bottom30" role="group" aria-label="Previous/Next Page">
+            {% if chores.has_prev %}
+                <a class="btn btn-primary" href={{ url_for("show_chores", page=chores.prev_num, language=language) }} role="button">Previous Page</a>
+            {% else %}
+                <button type="button" class="btn btn-primary" disabled>Previous Page</button>
+            {% endif %}
+            {% if chores.has_next %}
+                <a class="btn btn-primary" href={{ url_for("show_chores", page=chores.next_num, language=language) }} role="button">Next Page</a>
+            {% else %}
+                <button type="button" class="btn btn-primary" disabled>Next Page</button>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

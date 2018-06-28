@@ -15,6 +15,13 @@ def index():
     )
 
 
+@app.route("/about")
+def about():
+    return render_template(
+        "about.jinja2", languages=config.LANGUAGES, mappings=config.MAPPINGS
+    )
+
+
 @app.route("/issues/")
 @app.route("/issues/<int:page>")
 @app.route("/issues/<string:language>")

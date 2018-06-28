@@ -1,0 +1,15 @@
+{% extends "custom_base.jinja2" %}
+{% block title %}About Issue Haven{% endblock %}
+
+{% block styles %}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static', filename='addons.css')}}">
+{% endblock %}
+
+{% block content %}
+    <main role="main" class="container text-center top17">
+        <div>
+            <h1>Placeholder Text</h1>
+        </div>
+    </main>
+{% endblock %}

@@ -35,7 +35,9 @@
                     </div>
                 </div>
             {%  endfor %}
-            <div class="btn-group top17" role="group" aria-label="Previous/Next Page">
+        </div>
+        <div class="text-center">
+            <div class="btn-group top17 bottom30" role="group" aria-label="Previous/Next Page">
                 {% if chores.has_prev %}
                     <a class="btn btn-primary" href={{ url_for("show_chores", page=chores.prev_num, language=language) }} role="button">Previous Page</a>
                 {% else %}

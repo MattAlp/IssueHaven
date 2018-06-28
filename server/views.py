@@ -6,7 +6,7 @@ import config
 
 @app.route("/")
 def index():
-    return render_template("index.jinja2", total=db.session.query(Issue).count())
+    return render_template("index.jinja2", total=db.session.query(Issue).count(), languages=config.LANGUAGES, mappings=config.MAPPINGS)
 
 
 @app.route("/issues/")
@@ -15,10 +15,7 @@ def index():
 @app.route("/issues/<string:language>/<int:page>")
 def show_issues(page=1, language: str=None):
     if language is not None:
-        if language.lower() in config.MAPPINGS:
-            language = config.MAPPINGS[language.lower()]
-        else:
-            language = language.capitalize()
+        language = config.MAPPINGS[language.lower()]
         issues = (
             db.session.query(Issue)
             .filter(Issue.category == "code")
@@ -37,7 +34,7 @@ def show_issues(page=1, language: str=None):
             .order_by(Repo.total_stars.desc())
             .paginate(page=page, per_page=15)
         )
-    return render_template("issues.jinja2", issues=issues, language=language)
+    return render_template("issues.jinja2", issues=issues, language=language, languages=config.LANGUAGES, mappings=config.MAPPINGS)
 
 
 @app.route("/chores/")
@@ -46,8 +43,7 @@ def show_issues(page=1, language: str=None):
 @app.route("/chores/<string:language>/<int:page>")
 def show_chores(page=1, language=None):
     if language is not None:
-        if language.lower() in config.MAPPINGS:
-            language = config.MAPPINGS[language]
+        language = config.MAPPINGS[language.lower()]
         chores = (
             db.session.query(Issue)
             .filter(Issue.category == "chore")
@@ -66,4 +62,4 @@ def show_chores(page=1, language=None):
             .order_by(Repo.total_stars.desc())
             .paginate(page=page, per_page=15)
         )
-    return render_template("chores.jinja2", chores=chores, language=language)
+    return render_template("chores.jinja2", chores=chores, language=language, languages=config.LANGUAGES, mappings=config.MAPPINGS)

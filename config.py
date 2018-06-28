@@ -29,9 +29,12 @@ CODE = [
 
 CHORE = ["translation", "documentation", "docs", "chore", "localization"]
 
+SPECIAL = []  # i.e. Hacktoberfest and other code-sprint-like events
+
 CATEGORIES = {
     "chore": CHORE,
     "code": CODE,
+    "special": SPECIAL
 }  # Categories are iterated over first to last (highest to lowest priority)
 
 LABELS = sorted({x for v in CATEGORIES.values() for x in v})  # From Stack Overflow
@@ -58,6 +61,12 @@ MAPPINGS = {
     "objectivec": "Objective-C",
     "objc": "Objective-C",
     "py": "Python",
+    "python": "Python",
+    "java": "Java",
+    "ruby": "Ruby",
+    "go": "Go",
+    "swift": "Swift",
+    "scala": "Scala",
     "rb": "Ruby",
     "js": "JavaScript",
     "ts": "TypeScript",

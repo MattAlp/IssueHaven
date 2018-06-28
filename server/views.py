@@ -6,14 +6,20 @@ import config
 
 @app.route("/")
 def index():
-    return render_template("index.jinja2", total=db.session.query(Issue).count(), languages=config.LANGUAGES, mappings=config.MAPPINGS)
+    return render_template(
+        "index.jinja2",
+        total_issues=db.session.query(Issue).count(),
+        total_repos=db.session.query(Repo).count(),
+        languages=config.LANGUAGES,
+        mappings=config.MAPPINGS,
+    )
 
 
 @app.route("/issues/")
 @app.route("/issues/<int:page>")
 @app.route("/issues/<string:language>")
 @app.route("/issues/<string:language>/<int:page>")
-def show_issues(page=1, language: str=None):
+def show_issues(page=1, language: str = None):
     if language is not None:
         language = config.MAPPINGS[language.lower()]
         issues = (
@@ -34,7 +40,13 @@ def show_issues(page=1, language: str=None):
             .order_by(Repo.total_stars.desc())
             .paginate(page=page, per_page=15)
         )
-    return render_template("issues.jinja2", issues=issues, language=language, languages=config.LANGUAGES, mappings=config.MAPPINGS)
+    return render_template(
+        "issues.jinja2",
+        issues=issues,
+        language=language,
+        languages=config.LANGUAGES,
+        mappings=config.MAPPINGS,
+    )
 
 
 @app.route("/chores/")
@@ -62,4 +74,10 @@ def show_chores(page=1, language=None):
             .order_by(Repo.total_stars.desc())
             .paginate(page=page, per_page=15)
         )
-    return render_template("chores.jinja2", chores=chores, language=language, languages=config.LANGUAGES, mappings=config.MAPPINGS)
+    return render_template(
+        "chores.jinja2",
+        chores=chores,
+        language=language,
+        languages=config.LANGUAGES,
+        mappings=config.MAPPINGS,
+    )

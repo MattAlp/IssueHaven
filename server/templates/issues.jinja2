@@ -36,20 +36,19 @@
                 </div>
             {% endfor %}
         </div>
-        <div class="text-center">
-            <div class="btn-group top17 bottom30" role="group" aria-label="Previous/Next Page">
-                {% if issues.has_prev %}
-                    <a class="btn btn-primary" href={{ url_for("show_issues", page=issues.prev_num, language=language) }} role="button">Previous Page</a>
-                {% else %}
-                    <button type="button" class="btn btn-primary" disabled>Previous Page</button>
-                {% endif %}
-                {% if issues.has_next %}
-                    <a class="btn btn-primary" href={{ url_for("show_issues", page=issues.next_num, language=language) }} role="button">Next Page</a>
-                {% else %}
-                    <button type="button" class="btn btn-primary" disabled>Next Page</button>
-                {% endif %}
-            </div>
+    </div>
+    <div class="text-center">
+        <div class="btn-group top17 bottom30" role="group" aria-label="Previous/Next Page">
+            {% if issues.has_prev %}
+                <a class="btn btn-primary" href={{ url_for("show_issues", page=issues.prev_num, language=language) }} role="button">Previous Page</a>
+            {% else %}
+                <button type="button" class="btn btn-primary" disabled>Previous Page</button>
+            {% endif %}
+            {% if issues.has_next %}
+                <a class="btn btn-primary" href={{ url_for("show_issues", page=issues.next_num, language=language) }} role="button">Next Page</a>
+            {% else %}
+                <button type="button" class="btn btn-primary" disabled>Next Page</button>
+            {% endif %}
         </div>
-
     </div>
 {% endblock %}

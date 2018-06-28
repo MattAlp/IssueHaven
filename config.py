@@ -1,5 +1,8 @@
 import os
 
+DEV_MODE = False  # TODO add custom configs based on DEV_MODE variable
+
+
 # "Help wanted" is intentionally not included, far too vague
 # Same applies for the "Bug" label
 CODE = [
@@ -34,7 +37,7 @@ SPECIAL = []  # i.e. Hacktoberfest and other code-sprint-like events
 CATEGORIES = {
     "chore": CHORE,
     "code": CODE,
-    "special": SPECIAL
+    "special": SPECIAL,
 }  # Categories are iterated over first to last (highest to lowest priority)
 
 LABELS = sorted({x for v in CATEGORIES.values() for x in v})  # From Stack Overflow
@@ -51,7 +54,7 @@ LANGUAGES = [
     "typescript",
     "swift",
     "scala",
-    "objc"
+    "objc",
 ]
 
 MAPPINGS = {
@@ -72,7 +75,7 @@ MAPPINGS = {
     "ts": "TypeScript",
     "javascript": "JavaScript",
     "typescript": "TypeScript",
-    "php": "PHP"
+    "php": "PHP",
 }
 
 # TODO add custom colour support via CSS to issue pages
@@ -89,7 +92,7 @@ COLOUR_MAPPINGS = {
     "TypeScript": "#007ACC",
     "Swift": "#FC3F27",
     "Scala": "#371777",
-    "Objective-C": "#8E43E7"
+    "Objective-C": "#8E43E7",
 }
 
 TOKEN = os.getenv("TOKEN")

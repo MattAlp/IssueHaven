@@ -14,10 +14,20 @@
 .bottom30 { margin-bottom:30px; }
 .container-margin-bottom { margin-bottom:8em; }
 
-/* Sticky footer styles from Bootstrap examples
+/* Sticky footer styles from Bootstrap examples and https://stackoverflow.com/a/21934220
 -------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 90px;
+}
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
 }

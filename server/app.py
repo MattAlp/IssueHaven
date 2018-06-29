@@ -12,9 +12,7 @@ flask_bootstrap.JQUERY_VERSION = "3.3.1"
 # End monkey-patch
 app = Flask(__name__)
 
-app.config[
-    "SQLALCHEMY_DATABASE_URI"
-] = config.DATABASE_URL
+app.config["SQLALCHEMY_DATABASE_URI"] = config.DATABASE_URL
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 flask_bootstrap.Bootstrap(app)

@@ -8,7 +8,9 @@ if DEV_MODE:
     load_dotenv(find_dotenv("dev.env", raise_error_if_not_found=True))
     PROJECT_ROOT = os.path.dirname(__file__)
     DATA_FOLDER = os.path.join(PROJECT_ROOT, "data")
-    DATABASE_URL = "sqlite:///" + os.path.join(DATA_FOLDER, "github_data.db")  # there might be a better way to do this
+    DATABASE_URL = "sqlite:///" + os.path.join(
+        DATA_FOLDER, "github_data.db"
+    )  # there might be a better way to do this
 else:
     load_dotenv(find_dotenv("prod.env", raise_error_if_not_found=True))
     DATABASE_URL = os.getenv("DATABASE_URL")

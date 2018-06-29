@@ -8,29 +8,60 @@
 {% endblock %}
 
 {% block content %}
-    <main role="main" class="container text-center top30 bottom30">
-        <div>
+    <main role="main" id="banner">
+        <div class="container text-center top30">
             <h1>Contributing to Open Source doesn't have to be difficult.</h1>
             <p class="lead">Choose from <b>{{ total_repos }}</b> repositories containing <b>{{ total_issues }}</b> total issues on <b>Issue Haven</b></p>
         </div>
-    </main>
-    <div class="center-block container text-center">
-        <div class="center-block row">
-            <div class="col-sm-4 col-lg-4">
-                <a href={{ url_for("show_issues") }}><i class="fas fa-code fa-3x"></i></a>
-                <br>
-                <h3><b>Help with Code</b></h3>
-            </div>
-            <div class="col-sm-4 col-lg-4">
-                <a href={{ url_for("show_chores") }}><i class="fas fa-book fa-3x"></i></a>
-                <br>
-                <h3><b>Help with Documentation and Chores</b></h3>
-            </div>
-            <div class="col-sm-4 col-lg-4">
-                <a href={{ url_for("about") }}><i class="fas fa-question fa-3x"></i></a>
-                <br>
-                <h3><b>Find out more</b></h3>
+        <div class="center-block container text-center container-margin-top">
+            <div class="row">
+                <div class="col-md-4 col-lg-4">
+                    <a href={{ url_for("show_issues") }}><i class="fas fa-code fa-3x"></i></a>
+                    <br>
+                    <h3><b>Help with Code</b></h3>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <a href={{ url_for("show_chores") }}><i class="fas fa-book fa-3x"></i></a>
+                    <br>
+                    <h3><b>Help with Documentation and Chores</b></h3>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <a href={{ url_for("about") }}><i class="fas fa-question fa-3x"></i></a>
+                    <br>
+                    <h3><b>Find out more</b></h3>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer class="footer">
+    <hr>
+        <div class="row">
+            <div class="col-4 col-md text-center">
+                <h5><b>Issue Haven</b></h5>
+            </div>
+            <div class="col-4 col-md">
+                <h5>Get Started</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href={{ url_for("show_issues") }}>Help with Code</a></li>
+                    <li><a class="text-muted" href={{ url_for("show_chores") }}>Help with Documentation and Chores</a></li>
+                </ul>
+            </div>
+            <div class="col-4 col-md">
+                <h5>Popular Languages</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href={{ url_for("show_issues", language="py") }}>Python</a></li>
+                    <li><a class="text-muted" href={{ url_for("show_issues", language="js") }}>JavaScript</a></li>
+                    <li><a class="text-muted" href={{ url_for("show_issues", language="rb") }}>Ruby</a></li>
+                </ul>
+            </div>
+            <div class="col-4 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href={{ url_for("about") }}>About Issue Haven</a></li>
+                    <li><a class="text-muted" href={{ url_for("contribute") }}>View on Github</a></li>
+                    <li><a class="text-muted" href={{ url_for("donate") }}>Donate</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 {% endblock %}

@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, redirect
 from github_searcher.models import Issue, Repo
 from .app import app, db
 import config
@@ -20,6 +20,16 @@ def about():
     return render_template(
         "about.jinja2", languages=config.LANGUAGES, mappings=config.MAPPINGS
     )
+
+
+@app.route("/donate")
+def donate():
+    return redirect(config.DONATE_LINK, code=302)
+
+
+@app.route("/contribute")
+def contribute():
+    return redirect(config.CONTRIBUTE_LINK, code=302)
 
 
 @app.route("/issues/")

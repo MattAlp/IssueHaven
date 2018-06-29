@@ -1,7 +1,21 @@
 import os
+from dotenv import load_dotenv, find_dotenv
 
-DEV_MODE = True  # TODO add custom configs based on DEV_MODE variable
 
+DEV_MODE = True
+
+if DEV_MODE:
+    load_dotenv(find_dotenv("dev.env", raise_error_if_not_found=True))
+    PROJECT_ROOT = os.path.dirname(__file__)
+    DATA_FOLDER = os.path.join(PROJECT_ROOT, "data")
+    DATABASE_URL = "sqlite:///" + os.path.join(DATA_FOLDER, "github_data.db")  # there might be a better way to do this
+else:
+    load_dotenv(find_dotenv("prod.env", raise_error_if_not_found=True))
+    DATABASE_URL = os.getenv("DATABASE_URL")
+
+TOKEN = os.getenv("TOKEN")
+
+HEADER = {"Authorization": "token %s" % TOKEN}
 
 # "Help wanted" is intentionally not included, far too vague
 # Same applies for the "Bug" label
@@ -95,22 +109,12 @@ COLOUR_MAPPINGS = {
     "Objective-C": "#8E43E7",
 }
 
-TOKEN = os.getenv("TOKEN")
-
-HEADER = {"Authorization": "token %s" % TOKEN}
-
 SEARCH_PER_PAGE = 100
 
 DEFAULT_RESULTS_PER_PAGE = 30
 
-PROJECT_ROOT = os.path.dirname(__file__)
-
-DATA_FOLDER = os.path.join(PROJECT_ROOT, "data")
-
-DATABASE_URL = "sqlite:///" + os.path.join(DATA_FOLDER, "github_data.db")
-
 GRAPHQL_API_URL = "https://api.github.com/graphql"
 
-CONTRIBUTE_LINK = ""
+CONTRIBUTE_LINK = "https://github.com/MattAlp/IssueHaven"
 
-DONATE_LINK = ""
+DONATE_LINK = os.getenv("DONATE_LINK")

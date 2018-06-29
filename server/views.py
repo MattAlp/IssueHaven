@@ -24,12 +24,12 @@ def about():
 
 @app.route("/donate")
 def donate():
-    redirect(config.DONATE_LINK, code=302)
+    return redirect(config.DONATE_LINK, code=302)
 
 
 @app.route("/contribute")
 def contribute():
-    redirect(config.CONTRIBUTE_LINK, code=302)
+    return redirect(config.CONTRIBUTE_LINK, code=302)
 
 
 @app.route("/issues/")

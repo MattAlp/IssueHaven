@@ -110,3 +110,7 @@ DATA_FOLDER = os.path.join(PROJECT_ROOT, "data")
 DATABASE_URL = "sqlite:///" + os.path.join(DATA_FOLDER, "github_data.db")
 
 GRAPHQL_API_URL = "https://api.github.com/graphql"
+
+CONTRIBUTE_LINK = ""
+
+DONATE_LINK = ""

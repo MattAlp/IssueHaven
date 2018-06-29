@@ -4,6 +4,7 @@
 .top15 { margin-top:15px; }
 .top17 { margin-top:17px; }
 .top30 { margin-top:30px; }
+.container-margin-top { margin-top:8em; }
 
 .bottom5 { margin-bottom:5px; }
 .bottom7 { margin-bottom:7px; }
@@ -11,3 +12,12 @@
 .bottom15 { margin-bottom:15px; }
 .bottom17 { margin-bottom:17px; }
 .bottom30 { margin-bottom:30px; }
+.container-margin-bottom { margin-bottom:8em; }
+
+/* Sticky footer styles from Bootstrap examples
+-------------------------------------------------- */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

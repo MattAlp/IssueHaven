@@ -1,9 +1,9 @@
 # PyCharm and current project
 .idea/
 project_tools/*.sqlite
-project_tools/repos.json
 data/
 !data/.gitkeep
+*.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

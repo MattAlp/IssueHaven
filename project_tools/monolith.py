@@ -1,11 +1,15 @@
+import os
+import sys
 import json
 import time
-import config
 import requests
 from typing import List
-from github_searcher.models import Base, engine, Issue, Repo
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
+# Adds relative import functionality
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import config
+from github_searcher.models import Base, engine, Issue, Repo
 
 
 class PyJSON(object):

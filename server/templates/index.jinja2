@@ -1,13 +1,11 @@
 {% extends "custom_base.jinja2" %}
-{% block title %}Welcome to Issue Haven!{% endblock %}
 
-{% block styles %}
-    {{super()}}
-    <link rel="stylesheet" href="{{url_for('static', filename='addons.css')}}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+{% block title %}
+    Welcome to Issue Haven!
 {% endblock %}
 
 {% block content %}
+    {{ super() }}
     <main role="main" id="banner">
         <div class="container text-center top30">
             <h1>Contributing to Open Source doesn't have to be difficult.</h1>
@@ -33,37 +31,4 @@
             </div>
         </div>
     </main>
-    <footer class="footer">
-        <hr>
-        <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-6 text-center">
-                <h5><b>Issue Haven</b></h5>
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6">
-                <h5>Get Started</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href={{ url_for("about") }}>About Issue Haven</a></li>
-                    <li><a class="text-muted" href={{ url_for("show_issues") }}>Help with Code</a></li>
-                    <li><a class="text-muted" href={{ url_for("show_chores") }}>Help with Documentation and Chores</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <h5>Popular Languages</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href={{ url_for("show_issues", language="py") }}><i class="fab fa-python"></i> Python</a></li>
-                    <li><a class="text-muted" href={{ url_for("show_issues", language="js") }}><i class="fab fa-js-square"></i> JavaScript</a></li>
-                    <li><a class="text-muted" href={{ url_for("show_issues", language="rb") }}><i class="fas fa-gem"></i> Ruby</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <h5>More Information</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href={{ url_for("refer") }}><i class="fab fa-digital-ocean"></i> Issue Haven runs on DigitalOcean</a></li>
-                    <li><a class="text-muted" href={{ url_for("contribute") }}><i class="fab fa-github"></i> View on Github</a></li>
-                    <li><a class="text-muted" href={{ url_for("donate") }}><i class="fas fa-money-check-alt"></i> Donate</a></li>
-                </ul>
-            </div>
-            {#            <i class="fab fa-digital-ocean"></i>#}
-        </div>
-    </footer>
 {% endblock %}

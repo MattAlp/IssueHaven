@@ -4,13 +4,8 @@
     Help with Documentation and Chores
 {% endblock %}
 
-{% block styles %}
-    {{super()}}
-    <link rel="stylesheet"
-          href="{{url_for('static', filename='addons.css')}}">
-{% endblock %}
-
 {% block content %}
+    {{ super() }}
     <main role="main" class="container text-center">
         <div>
             {% if language is not none %}

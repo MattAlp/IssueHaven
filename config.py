@@ -50,6 +50,15 @@ CODE = [
     "good-for-beginner",
     "first timers only",
     "first time contributor",
+    "exp/beginner",
+    "jump-in",
+    "good-beginner-issue",
+    "stat:contributions welcome",
+    "level:starter",
+    "good first bug",
+    "difficulty/low",
+    "difficulty/newcomer",
+    "for beginners",
 ]
 
 CHORE = ["translation", "documentation", "docs", "chore", "localization"]

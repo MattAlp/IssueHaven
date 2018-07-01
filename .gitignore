@@ -4,8 +4,6 @@ project_tools/*.sqlite
 data/
 !data/.gitkeep
 *.env
-!example_prod.env
-!example_dev.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

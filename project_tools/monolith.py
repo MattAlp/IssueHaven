@@ -6,6 +6,7 @@ import requests
 from typing import List
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
+
 # Adds relative import functionality
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import config
@@ -163,7 +164,10 @@ def get_issue_category(issue_labels: List[str]):
 
 
 if __name__ == "__main__":
-    print("Config Token: %s" % config.TOKEN)
+    if config.DEV_MODE:
+        print("Config Token: %s" % config.TOKEN)
+    else:
+        print("Config Token: [hidden in production]")
     print("Database URL: " + config.DATABASE_URL)
 
     Base.metadata.create_all(engine)

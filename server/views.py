@@ -37,6 +37,11 @@ def refer():
     return redirect(config.REFER_LINK, code=302)
 
 
+@app.route("/learn")
+def learn():
+    return redirect(config.LEARN_LINK, code=302)
+
+
 @app.route("/issues/")
 @app.route("/issues/<int:page>")
 @app.route("/issues/<string:language>")

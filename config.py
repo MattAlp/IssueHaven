@@ -23,6 +23,8 @@ DONATE_LINK = os.getenv("DONATE_LINK")
 
 REFER_LINK = os.getenv("REFER_LINK")
 
+LEARN_LINK = os.getenv("LEARN_LINK")
+
 HEADER = {"Authorization": "token %s" % TOKEN}
 
 # "Help wanted" is intentionally not included, far too vague

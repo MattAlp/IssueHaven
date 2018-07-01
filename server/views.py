@@ -103,3 +103,23 @@ def show_chores(page=1, language=None):
         languages=config.LANGUAGES,
         mappings=config.MAPPINGS,
     )
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return (
+        render_template(
+            "404.jinja2", languages=config.LANGUAGES, mappings=config.MAPPINGS
+        ),
+        404,
+    )
+
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return (
+        render_template(
+            "500.jinja2", languages=config.LANGUAGES, mappings=config.MAPPINGS
+        ),
+        500,
+    )

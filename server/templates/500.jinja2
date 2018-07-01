@@ -1,0 +1,20 @@
+{% extends "custom_base.jinja2" %}
+
+{% block title %}
+    404
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <main role="main" class="container text-center container-margin-top">
+        <div>
+            <h1>500 - Something isn't quite right</h1>
+            <h3>We're looking into it</h3>
+            <a href={{ url_for("index") }}>
+                <p class="lead">
+                    Head on back to safer waters
+                </p>
+            </a>
+        </div>
+    </main>
+{% endblock %}

@@ -1,7 +1,12 @@
 {% extends "bootstrap/base.html" %}
 
+{%  block head %}
+    {{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+{% endblock %}
+
 {% block styles %}
-    {{super()}}
+    {{ super() }}
     <link rel="stylesheet" href="{{url_for('static', filename='addons.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 {% endblock %}

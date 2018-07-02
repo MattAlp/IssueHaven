@@ -164,11 +164,14 @@ def get_issue_category(issue_labels: List[str]):
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     if config.DEV_MODE:
+        sys.stdout = open("monolith%d.log" % start_time, "w")
         print("Config Token: %s" % config.TOKEN)
+        print("Database URL: " + config.DATABASE_URL)
     else:
         print("Config Token: [hidden in production]")
-    print("Database URL: " + config.DATABASE_URL)
+        print("Database URL: [password and URL hidden in production]")
 
     Base.metadata.create_all(engine)
     session_factory = sessionmaker(bind=engine)
@@ -263,3 +266,4 @@ if __name__ == "__main__":
         session.commit()
 
     session.close()
+    print("Script took %s to execute" % str(time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time))))

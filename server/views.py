@@ -1,4 +1,4 @@
-from flask import render_template, redirect
+from flask import render_template, redirect, send_from_directory
 from github_searcher.models import Issue, Repo
 from .app import app, db
 import config
@@ -40,6 +40,11 @@ def refer():
 @app.route("/learn")
 def learn():
     return redirect(config.LEARN_LINK, code=302)
+
+
+@app.route("/robots.txt")
+def robots():
+    return send_from_directory(app.static_folder, "robots.txt")
 
 
 @app.route("/issues/")

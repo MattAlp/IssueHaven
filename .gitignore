@@ -1,6 +1,5 @@
 # PyCharm and current project
 .idea/
-project_tools/*.sqlite
 data/
 !data/.gitkeep
 *.env

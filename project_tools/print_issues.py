@@ -11,7 +11,14 @@ if __name__ == "__main__":
         print("%s - %d stars, lang:%s" % (repo.name, repo.total_stars, repo.language))
         for issue in repo.issues:
             print(
-                "\t[%s]\t%s with %d comments, created at %s"
-                % (issue.category, issue.title, issue.total_comments, issue.created_at)
+                "\t[%s]\t%s with %d comments, created at %s | ID = %d | REPO ID = %d"
+                % (
+                    issue.category,
+                    issue.title,
+                    issue.total_comments,
+                    issue.created_at,
+                    issue.issue_id,
+                    issue.repo_id,
+                )
             )
         print()

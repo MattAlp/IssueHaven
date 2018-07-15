@@ -165,11 +165,14 @@ def get_issue_category(issue_labels: List[str]):
 
 if __name__ == "__main__":
     start_time = time.time()
+    out_file = open("monolith_runs.log", "a")
     if config.DEV_MODE:
-        sys.stdout = open("monolith%d.log" % start_time, "w")
+        out_file.close()
         print("Config Token: %s" % config.TOKEN)
         print("Database URL: " + config.DATABASE_URL)
     else:
+        sys.stdout = out_file
+        sys.stderr = out_file
         print("Config Token: [hidden in production]")
         print("Database URL: [password and URL hidden in production]")
 
@@ -266,4 +269,9 @@ if __name__ == "__main__":
         session.commit()
 
     session.close()
-    print("Script took %s to execute" % str(time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time))))
+    if not config.DEV_MODE:
+        out_file.close()
+    print(
+        "Script took %s to execute"
+        % str(time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)))
+    )

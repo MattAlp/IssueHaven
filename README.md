@@ -1,4 +1,4 @@
-Issue Haven
+[Issue Haven](https://www.issuehaven.com)
 ===========
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
@@ -50,7 +50,7 @@ Monolith functions by going through a list of predefined issue labels and queryi
 After obtaining a list of repositories that fit the criteria, the script iterates through the labeled issues in the repository and categorizes them (i.e. programming vs documentation), and stores them in a database.
 
 #### Stack Information
-The public instance of Issue Haven runs on a Flask / Gunicorn / NGINX stack.
+The public instance of Issue Haven runs on a Flask / Gunicorn / NGINX stack, with a PostgreSQL database.
 
 Other Information
 -----------------

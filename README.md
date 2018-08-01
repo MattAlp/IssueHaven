@@ -1,11 +1,15 @@
-[Issue Haven](https://www.issuehaven.com)
+[Issue Haven](https://www.issuehaven.com) 
 ===========
+
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![HitCount](http://hits.dwyl.io/MattAlp/IssueHaven.svg)](http://hits.dwyl.io/MattAlp/IssueHaven)
-
+[![star this repo](http://githubbadges.com/star.svg?user=MattAlp&repo=IssueHaven&style=flat)](https://github.com/MattAlp/IssueHaven)
+[![fork this repo](http://githubbadges.com/fork.svg?user=MattAlp&repo=IssueHaven&style=flat)](https://github.com/MattAlp/IssueHaven/fork)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/MattAlp)
 
+
+![Landing Page Header](header.png)
 
 About
 -----
